@@ -29,3 +29,4 @@ for item in workout_plan[goal]:
     st.write("- ", item)
 
 st.success("This is the basic skeleton. We'll make it smarter soon!")
+# test
