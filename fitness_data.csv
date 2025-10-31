@@ -1,0 +1,28 @@
+age,gender,goal,experience,days_per_week,recommended_plan
+18,Male,Lose Weight,Beginner,3,Cardio + Core Workouts
+20,Female,Lose Weight,Beginner,4,HIIT + Light Weights
+22,Male,Gain Muscle,Beginner,4,Full Body Strength Training
+25,Female,Maintain Fitness,Intermediate,3,Yoga + Bodyweight Training
+27,Male,Gain Muscle,Intermediate,5,Push Pull Legs Split
+28,Female,Lose Weight,Intermediate,5,Cardio + HIIT + Weights
+30,Male,Gain Muscle,Advanced,6,Powerlifting Routine
+31,Female,Gain Muscle,Advanced,6,Strength + Isolation Training
+33,Male,Maintain Fitness,Beginner,2,Balanced Routine + Cardio
+35,Female,Lose Weight,Advanced,5,HIIT + Strength Circuits
+36,Male,Maintain Fitness,Intermediate,3,Calisthenics + Core
+38,Female,Gain Muscle,Intermediate,4,Split Training + Core
+40,Male,Gain Muscle,Advanced,6,Heavy Lifts + Split Routine
+42,Female,Maintain Fitness,Intermediate,3,Yoga + Light Weights
+44,Male,Lose Weight,Beginner,3,Walking + HIIT Intervals
+45,Female,Gain Muscle,Beginner,4,Full Body Dumbbell Training
+47,Male,Maintain Fitness,Intermediate,4,CrossFit Inspired Routine
+48,Female,Lose Weight,Intermediate,5,HIIT + Resistance Bands
+50,Male,Gain Muscle,Advanced,5,Power Hypertrophy Upper Lower Split
+52,Female,Maintain Fitness,Beginner,2,Yoga + Pilates
+55,Male,Lose Weight,Beginner,3,Cardio + Mobility Training
+58,Female,Lose Weight,Intermediate,4,Aerobics + Bodyweight Workouts
+60,Male,Maintain Fitness,Intermediate,3,Functional Training + Stretching
+63,Female,Maintain Fitness,Beginner,2,Light Yoga + Walking
+65,Male,Gain Muscle,Beginner,3,Machine-Based Strength Training
+68,Female,Maintain Fitness,Beginner,2,Chair Workouts + Walking
+70,Male,Lose Weight,Beginner,2,Low Impact Cardio + Stretching
