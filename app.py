@@ -1,32 +1,57 @@
 import streamlit as st
+import random
 import pandas as pd
 
-st.set_page_config(page_title="AI Fitness Planner", layout="centered")
+st.set_page_config(page_title="AI Fitness Planner", page_icon="💪")
 
-st.title("🏋️ AI Fitness Planner")
-st.write("Get personalized workout plans based on your info")
+st.title("💪 AI Fitness Planner")
+st.write("Plan personalized workouts based on your goals and preferences.")
 
-# Sidebar for user input
-st.sidebar.header("Your Information")
-age = st.sidebar.slider("Age", 15, 70, 25)
-gender = st.sidebar.selectbox("Gender", ["Male", "Female", "Other"])
-goal = st.sidebar.selectbox("Goal", ["Lose Weight", "Gain Muscle", "Maintain Fitness"])
-experience = st.sidebar.selectbox("Experience Level", ["Beginner", "Intermediate", "Advanced"])
-days = st.sidebar.slider("Days per week you can train", 1, 7, 3)
-
-# Placeholder workout plan
-st.subheader("Your Personalized Workout Plan")
-st.write("👇 This is a placeholder. We’ll hook it to an ML model soon.")
-
-workout_plan = {
-    "Lose Weight": ["Cardio + HIIT", "Full-body Circuits", "Light Strength Training"],
-    "Gain Muscle": ["Heavy Compound Lifts", "Progressive Overload", "Isolation Exercises"],
-    "Maintain Fitness": ["Balanced Routine", "Mix of Cardio & Weights", "Mobility Work"]
+# --------------------------
+# 1️⃣ EXERCISE DATABASE
+# --------------------------
+exercises = {
+    "chest": ["Bench Press", "Incline Dumbbell Press", "Push-ups", "Cable Fly", "Chest Dips"],
+    "back": ["Pull-ups", "Deadlift", "Barbell Row", "Lat Pulldown", "Seated Cable Row"],
+    "legs": ["Squats", "Lunges", "Leg Press", "Romanian Deadlift", "Leg Extension"],
+    "shoulders": ["Overhead Press", "Lateral Raises", "Front Raises", "Reverse Fly", "Arnold Press"],
+    "arms": ["Bicep Curls", "Tricep Pushdown", "Hammer Curls", "Skull Crushers", "Concentration Curl"],
+    "core": ["Plank", "Crunches", "Leg Raises", "Bicycle Crunch", "Russian Twists"],
+     "biceps": ["Barbell Curl", "Dumbbell Curl", "Preacher Curl"],
+    "triceps": ["Tricep Dips", "Overhead Tricep Extension", "Close Grip Bench Press"]
 }
 
-st.write(f"Based on your goal: **{goal}**, here’s a sample plan:")
-for item in workout_plan[goal]:
-    st.write("- ", item)
+# --------------------------
+# 2️⃣ SPLIT STRUCTURES
+# --------------------------
+splits = {
+    "Full Body": [["chest", "back", "legs", "shoulders", "arms", "core"]],
+    "Upper / Lower": [["chest", "back", "shoulders", "arms"], ["legs", "core"]],
+    "Push / Pull / Legs": [["chest", "shoulders", "triceps"], ["back", "biceps"], ["legs", "core"]],
+}
 
-st.success("This is the basic skeleton. We'll make it smarter soon!")
-# test
+# --------------------------
+# 3️⃣ USER INPUT
+# --------------------------
+st.header("🏋️ Plan Your Routine")
+
+days = st.selectbox("How many days per week do you want to work out?", [3, 4, 5, 6])
+split_choice = st.selectbox("Choose your workout split:", list(splits.keys()))
+
+if st.button("Generate Plan"):
+    chosen_split = splits[split_choice]
+    plan = {}
+
+    # Cycle through the split for the number of workout days
+    for i in range(days):
+        muscles = chosen_split[i % len(chosen_split)]
+        day_plan = []
+        for m in muscles:
+            day_plan.append(f"{m.capitalize()}: {random.choice(exercises.get(m, []))}")
+        plan[f"Day {i+1}"] = day_plan
+
+    st.success(f"✅ Generated {days}-Day {split_choice} Plan")
+    for day, workouts in plan.items():
+        st.subheader(day)
+        for w in workouts:
+            st.write(f"- {w}")
