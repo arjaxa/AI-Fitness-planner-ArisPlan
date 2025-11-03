@@ -26,7 +26,7 @@ exercises = {
 # --------------------------
 
 custom_splits = {
-    "4 Day Upper Lower (My Custom)": {
+    "4 Day Upper Lower (2U/2L Custom)": {
         "Day 1 - Upper (Push)": [
             {"muscle": "chest", "type": "compound", "exercise": ["Barbell Bench Press", "Incline Dumbbell Press"]},
             {"muscle": "shoulders", "type": "compound", "exercise": ["Overhead Press"]},
@@ -34,10 +34,15 @@ custom_splits = {
             {"muscle": "triceps", "type": "isolation", "exercise": ["Tricep Pushdown"]},
             {"muscle": "core", "type": "stability", "exercise": ["Plank", "Hanging Leg Raises"]}
         ],
-        "Day 2 - Lower": [
-            {"muscle": "legs", "type": "compound", "exercise": ["Squats", "Romanian Deadlift"]},
-            {"muscle": "legs", "type": "isolation", "exercise": ["Leg Extension", "Leg Curl"]},
-            {"muscle": "core", "type": "core", "exercise": ["Cable Crunch"]}
+        "Day 2 - Lower (Quad, glute, abductor, calve)": [
+            {"muscle": "Quads", "type": "isolation", "exercise": ["Leg extension", "Leg extension"]},
+            {"muscle": "Quads", "type": "compound", "exercise": ["Smith squats", "BB Squats"]},
+            {"muscle": "Quads", "type": "compound", "exercise": ["Hack squats"]},
+            {"muscle": "Glute/abductor", "type": "i/c", "exercise": ["Cable leg abductions"]},
+            {"muscle": "Quads", "type": "isolation/L", "exercise": ["DB Goblet squats"]},
+            {"muscle": "Quads", "type": "compound/L", "exercise": ["DB Lunge"]},
+            {"muscle": "Calves", "type": "i/c", "exercise": ["Seated DB Calves"]},
+            {"muscle": "Calves", "type": "i/c", "exercise": ["Standing calves machine"]}
         ],
         "Day 3 - Upper (Pull)": [
             {"muscle": "back", "type": "compound", "exercise": ["Deadlift", "Barbell Row"]},
