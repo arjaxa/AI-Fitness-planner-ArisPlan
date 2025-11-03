@@ -26,7 +26,7 @@ exercises = {
 # --------------------------
 
 custom_splits = {
-    "4 Day Upper Lower (2U/2L Custom)": {
+    "4 Day Upper Lower (2Upper/2Lower Custom)": {
         "Day 1 - Upper (Push)": [
             {"muscle": "chest", "type": "compound", "exercise": ["Barbell Bench Press", "Incline Dumbbell Press"]},
             {"muscle": "shoulders", "type": "compound", "exercise": ["Overhead Press"]},
