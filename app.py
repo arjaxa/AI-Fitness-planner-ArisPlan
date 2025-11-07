@@ -36,8 +36,9 @@ custom_splits = {
 
     "4": {"4 Day Upper Lower (pull/leg(q)/push/leg(h) Custom1)": {
         "Day 1 - Upper (Back, Triceps)": [
-            ["bench press", "db press"],
-            ["bb rows", "db rows"]
+            ["Reversed grip lat pulldown 12x4"],
+            ["BB Rows (RG) 12 + 10 + 10 + 8"],
+            ["Machine rows 12 + Straight arm pulldown 12] x4"]
         ],
         "Day 2 - Lower (Quad, glute, abductor, calve)": [
             ["Leg extensions 3x12", "Leg extensions 12 + Smith Squats 12] x4 ", "Leg extensions 4x8", "Leg extensions 4x15", "Leg extensions 3x15", "Leg extensions 3x10", "Leg extensions 3x20", "Leg extensions 4x12", "Leg extensions 4x10", "Leg press", "Smit Squats"]
@@ -77,18 +78,18 @@ custom_splits = {
       # more variations...
 }
 
-# --------------------------
-# 2️⃣ SPLIT STRUCTURES
-# --------------------------
+
+# SPLIT STRUCTURES
+
 splits = {
     "Full Body": [["chest", "back", "legs", "shoulders", "arms", "core"]],
     "Upper / Lower": [["chest", "back", "shoulders", "arms"], ["legs", "core"]],
     "Push / Pull / Legs": [["chest", "shoulders", "triceps"], ["back", "biceps"], ["legs", "core"]],
 }
 
-# --------------------------
-# 3️⃣ USER INPUT
-# --------------------------
+
+# USER INPUT
+
 st.header("🏋️ Plan Your Routine")
 
 # Step 1: Choose number of days
