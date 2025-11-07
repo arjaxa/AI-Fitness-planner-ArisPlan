@@ -26,7 +26,7 @@ exercises = {
 # --------------------------
 
 custom_splits = {
-    "4 Day Upper Lower (2Upper/2Lower Custom)": {
+    "4 Day Upper Lower (pull/leg(q)/push/leg(h) Custom)": {
         "Day 1 - Upper (Push)": [
             {"muscle": "chest", "type": "compound", "exercise": ["Barbell Bench Press", "Incline Dumbbell Press"]},
             {"muscle": "shoulders", "type": "compound", "exercise": ["Overhead Press"]},
@@ -71,6 +71,17 @@ splits = {
 # 3️⃣ USER INPUT
 # --------------------------
 st.header("🏋️ Plan Your Routine")
+
+split_names = list(custom_splits.keys())
+selected_split = st.selectbox("Select a split variation:", split_names)
+
+if st.button("Generate Custom Plan"):
+    selected_plan = custom_splits[selected_split]
+    for day, exercises_list in selected_plan.items():
+        st.subheader(day)
+        for i, ex in enumerate(exercises_list, start=1):
+            st.write(f"{i}. {ex}")
+
 
 days = st.selectbox("How many days per week do you want to work out?", [3, 4, 5, 6])
 split_choice = st.selectbox("Choose your workout split:", list(splits.keys()))
