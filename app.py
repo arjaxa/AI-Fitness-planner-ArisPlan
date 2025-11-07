@@ -38,7 +38,8 @@ custom_splits = {
         "Day 1 - Upper (Back, Triceps)": [
             ["Reversed grip lat pulldown 12x4"],
             ["BB Rows (RG) 12 + 10 + 10 + 8"],
-            ["Machine rows 12 + Straight arm pulldown 12] x4"]
+            ["Machine rows 12 + Straight arm pulldown 12] x4"],
+            [". . ."]
         ],
         "Day 2 - Lower (Quad, abductor, calve)": [
             ["Leg extensions 3x12", "Leg extensions 12 + Smith Squats 12] x4 ", "Leg extensions 4x8", "Leg extensions 4x15", "Leg extensions 3x15", "Leg extensions 3x10", "Leg extensions 3x20", "Leg extensions 4x12", "Leg extensions 4x10", "Leg press", "Smit Squats"]
@@ -90,7 +91,7 @@ splits = {
 
 # USER INPUT
 
-st.header("🏋️ Plan Your Routine")
+st.header("🦾 Plan Your Routine")
 
 # Step 1: Choose number of days
 days_per_week = st.selectbox("How many days a week do you want to work out?", ["3", "4", "5", "6"])
