@@ -72,6 +72,17 @@ custom_splits = {
             "Day4": [...],
             "Day5": [...]
         }
+    },
+
+    "6": {
+        "6 Days Split (custom1)": {
+            "Day1": [...],
+            "Day2": [...],
+            "Day3": [...],
+            "Day4": [...],
+            "Day5": [...],
+            "Day6": [...]
+        }
     }
       # more variations...
 }
@@ -90,34 +101,49 @@ splits = {
 # --------------------------
 st.header("🏋️ Plan Your Routine")
 
-split_names = list(custom_splits.keys())
-selected_split = st.selectbox("Select a split variation:", split_names)
+# Step 1: Choose number of days
+days_per_week = st.selectbox("How many days a week do you want to work out?", ["3", "4", "5", "6"])
 
-if st.button("Generate Custom Plan"):
-    selected_plan = custom_splits[selected_split]
+# Step 2: Show split variations only for that day count
+available_variations = list(custom_splits[days_per_week].keys())
+selected_split = st.selectbox("Choose your split variation:", available_variations)
+
+# Step 3: Generate plan
+if st.button("Generate Plan"):
+    selected_plan = custom_splits[days_per_week][selected_split]
     for day, exercises_list in selected_plan.items():
         st.subheader(day)
         for i, ex in enumerate(exercises_list, start=1):
             st.write(f"{i}. {ex}")
 
+#split_names = list(custom_splits.keys())
+#selected_split = st.selectbox("Select a split variation:", split_names)
 
-days = st.selectbox("How many days per week do you want to work out?", [3, 4, 5, 6])
-split_choice = st.selectbox("Choose your workout split:", list(splits.keys()))
+#if st.button("Generate Custom Plan"):
+#    selected_plan = custom_splits[selected_split]
+#    for day, exercises_list in selected_plan.items():
+#        st.subheader(day)
+#        for i, ex in enumerate(exercises_list, start=1):
+#            st.write(f"{i}. {ex}")
 
-if st.button("Generate Plan"):
-    chosen_split = splits[split_choice]
-    plan = {}
+
+#days = st.selectbox("How many days per week do you want to work out?", [3, 4, 5, 6])
+#split_choice = st.selectbox("Choose your workout split:", list(splits.keys()))
+
+#if st.button("Generate Plan"):
+#    chosen_split = splits[split_choice]
+#    plan = {}
 
     # Cycle through the split for the number of workout days
-    for i in range(days):
-        muscles = chosen_split[i % len(chosen_split)]
-        day_plan = []
-        for m in muscles:
-            day_plan.append(f"{m.capitalize()}: {random.choice(exercises.get(m, []))}")
-        plan[f"Day {i+1}"] = day_plan
+#    for i in range(days):
+#        muscles = chosen_split[i % len(chosen_split)]
+#        day_plan = []
+#        for m in muscles:
+#            day_plan.append(f"{m.capitalize()}: {random.choice(exercises.get(m, []))}")
+#        plan[f"Day {i+1}"] = day_plan
 
-    st.success(f"✅ Generated {days}-Day {split_choice} Plan")
-    for day, workouts in plan.items():
-        st.subheader(day)
-        for w in workouts:
-            st.write(f"- {w}")
+#    st.success(f"✅ Generated {days}-Day {split_choice} Plan")
+#    for day, workouts in plan.items():
+#        st.subheader(day)
+#        for w in workouts:
+#            st.write(f"- {w}")
