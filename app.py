@@ -28,9 +28,39 @@ exercises = {
 custom_splits = {
     "3": {
         "3 Day Push/Pull/Leg split": {
-            "Day1": [...],
-            "Day2": [...],
-            "Day3": [...]
+            "Day 1 - push (chest, shoulder, trap, triceps)": [
+            ["BB Bench press | 10x3"],
+            ["Incline db bench press | 1ox3"],
+            ["DB Fly | 12x3"],
+            ["Seated shoulder press | 12x3"],
+            ["Upright db row | 10x3"],
+            ["DB Lateral raise | 8x3"],
+            ["BB Shrug | 12x3"],
+            ["DB Overhead tricep extensions | 8x3"],
+            ["Triceps pushdown | 8x3"]
+        ],
+        "Day 2 - Leg (quad, hamstring, glute, calves)": [
+            ["Leg extensions 4x12"],
+            ["Smith squats | 12 + 10 + 10 + 8"],
+            ["Smith lunge | 12x4", "Sumo squats | 12x4"],
+            ["Single leg leg press (12 + 20(both))x4", "Goblet squats | 16x4"],
+            ["Leg abduction machine | 16x4"],
+            ["Cable(Knee bent) kick backs | 12x4"],
+            ["Standing calves machine | 20x3"],
+            ["Seated calves | 30x3"]
+        ],
+        "Day 3 - pull (back, biceps, abs)": [
+            ["Smith shoulder press | 12x4", "Seated db shoulder press | 12x4"],
+            ["Cable lateral raises | 12x4"],
+            ["DB Lateral raises | 10x4"],
+            ["DB Front raise | 12x4"],
+            ["Reversed fly machine | 10x3"],
+            ["Cable rear delt | 12x4"],
+            ["DB Chest press | 10x3"],
+            ["DB chest fly | 8x3"],
+            ["BB Bicep curls | 8x3"],
+            ["DB hammer curls 12x3"]
+        ]
         }
     },
 
