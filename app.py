@@ -102,7 +102,7 @@ custom_splits = {
             ["BB RDL | 12x4"], # Hmastring_compound
             ["BB hip thrusts | 12x4", "Cable side kick | 15x3"], # Glute_compound
             ["Bulgarian split squats | 8x3"], # Glute_isolation
-            ["abduction machine | 15x4"], # Glute_isolation
+            ["abduction machine | 15x4"], # OuterTighs_isolation
             ["DB lifts | 12x3"], # Glute_compound
             ["DB Step ups | 12x4"], # Glute_compound
             ["Standing calves | 30x3"] # Calve_isolation
