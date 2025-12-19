@@ -55,10 +55,17 @@ custom_splits = {
             ["Standing calves machine | 20x3"],
             ["Seated calves | 30x3"]
         ],
-        "Day 3 - Upper (Pull)": [
-            {"muscle": "back", "type": "compound", "exercise": ["Deadlift", "Barbell Row"]},
-            {"muscle": "biceps", "type": "isolation", "exercise": ["Barbell Curl", "Hammer Curl"]},
-            {"muscle": "shoulders", "type": "isolation", "exercise": ["Rear Delt Fly"]}
+        "Day 3 - Upper (Shoulder, Chest, Bicep)": [
+            ["Smith shoulder press | 12x4", "Seated db shoulder press | 12x4"],
+            ["Cable lateral raises | 12x4"],
+            ["DB Lateral raises | 10x4"],
+            ["DB Front raise | 12x4"],
+            ["Reversed fly machine | 10x3"],
+            ["Cable rear delt | 12x4"],
+            ["DB Chest press | 10x3"],
+            ["DB chest fly | 8x3"],
+            ["BB Bicep curls | 8x3"],
+            ["DB hammer curls 12x3"]
         ],
         "Day 4 - Lower": [
             {"muscle": "legs", "type": "compound", "exercise": ["Front Squat", "Lunges"]},
