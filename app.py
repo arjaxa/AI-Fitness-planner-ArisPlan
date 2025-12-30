@@ -75,8 +75,16 @@ if st.button("Generate plan"):
     plan = generate_plan(selected_split_data)
     for day, exercises in plan.items():
         st.subheader(day)
+        st.divider()
         for i, ex in enumerate(exercises, start=1):
-            st.write(f"{i}. {ex}")
+            if "|" in ex:
+                name, details = ex.split("|", 1)
+                st.markdown(f"**{i}. {name.strip()}**\n_{details.strip()}_")
+            else:
+                st.markdown(f"**{i}. {ex}**")
+        
+        #for i, ex in enumerate(exercises, start=1):
+        #    st.write(f"{i}. {ex}")
 
 
 #if st.button("Generate Plan"):
