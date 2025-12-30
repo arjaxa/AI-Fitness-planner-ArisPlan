@@ -13,7 +13,9 @@ if "generated_plan" not in st.session_state:
 if "last_selection" not in st.session_state:
     st.session_state.last_selection = None
 if "pdf_file" not in st.session_state:
-    st.session_state.pdf_file = None    
+    st.session_state.pdf_file = None 
+if "show_download" not in st.session_state:
+    st.session_state.show_download = False       
 
 st.set_page_config(page_title="AI Fitness Planner", page_icon="aris.png")
 
@@ -87,15 +89,6 @@ def generate_plan(selected_split):
 
     return plan
 
-# convert plan to text
-#def plan_to_text(plan):
-#    text = ""
-#    for day, exercises in plan.items():
-#        for i, ex in enumerate(exercises, 1):
-#            text += f"{i}. {ex}\n"
-#        text += "\n"
-#    return text
-
 # plan to pdf
 def plan_to_pdf(plan):
     buffer = BytesIO()
@@ -125,60 +118,43 @@ def plan_to_pdf(plan):
     c.save()
     buffer.seek(0)
     return buffer
+ 
 
-#col1, col2 = st.columns(2)
-#with col1:
-#    regenerate = st.button("Regenerate", key="regenerate")
-#with col2:
-#    clear = st.button("Clear", key="clear")
 
-#if regenerate:
-#    st.session_state.generated_plan = generate_plan(custom_splits[days_per_week][selected_split])
-#if clear:
-#    st.session_state.generated_plan = None    
-    
+
+# Generate plan
 if st.button("Generate plan"):
-    plan = generate_plan(selected_split_data)
-    st.session_state.generated_plan = generate_plan(custom_splits[days_per_week][selected_split])
-    st.session_state.pdf_ready = False
-    st.session_state.pdf_file = None
-    # display
-    if st.session_state.generated_plan:
-     if st.button("Generate PDF"):
-        st.session_state.pdf_file = plan_to_pdf(
-            st.session_state.generated_plan
-        )
-        st.session_state.pdf_ready = True
+    st.session_state.generated_plan = generate_plan(selected_split_data)
+    st.session_state.show_download = False
+    #st.session_state.pdf_file = None
 
-    if st.session_state.pdf_ready:
-        st.download_button(
-            "⬇Download PDF",
-            st.session_state.pdf_file,
-            file_name="workout_plan.pdf",
-            mime="application/pdf"
-        )
+
+# Display plan
+if st.session_state.generated_plan:
     for day, exercises in st.session_state.generated_plan.items():
         st.subheader(day)
-        st.divider()
-        for i, ex in enumerate(exercises, start=1):
+        for i, ex in enumerate(exercises, 1):
             if "|" in ex:
                 name, details = ex.split("|", 1)
                 st.markdown(f"**{i}. {name.strip()}**\n_{details.strip()}_")
             else:
                 st.markdown(f"**{i}. {ex}**")
+        st.divider()
 
 
-# download converted text
-#if st.session_state.generated_plan:
-#    plan_text = plan_to_text(st.session_state.generated_plan)
-#    st.download_button(label="Download Plan", data=plan_text, file_name="Workout_plan.txt", mime="text/plan")    
+# export pdf
 
-# download pdf
-if st.session_state.generated_plan:
-    if st.button("Download PDF"):
-        st.session_state.pdf_file = plan_to_pdf(st.session_state.generated_plan)
-    if st.session_state.pdf_file:
-        st.download_button(label="Download PDF", data=st.session_state.pdf_file, file_name="Workout_plan.pdf", mime="application/pdf")    
+    if st.session_state.generated_plan:
+        if st.button("Prepare PDF"):
+            st.session_state.show_download = True
+    if st.session_state.show_download:
+        st.download_button(
+            label="Download PDF",
+            data=plan_to_pdf(st.session_state.generated_plan),
+            file_name="WorkoutPlan.pdf",
+            mime="application/pdf"
+        )        
+   
                
         
    # for day, exercises in selected_split_data.items():
