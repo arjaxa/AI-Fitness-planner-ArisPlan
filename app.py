@@ -153,6 +153,8 @@ days_per_week = st.selectbox("How many days a week do you want to work out?", ["
 available_variations = list(custom_splits[days_per_week].keys())
 selected_split = st.selectbox("Choose your split variation:", available_variations)
 
+selected_split_data = custom_splits[days_per_week][selected_split]
+
 
 # Generate plan
 import random
@@ -174,8 +176,8 @@ def generate_plan(selected_split):
     return plan
 
 if st.button("Generate plan"):
-    plan = generate_plan(selected_split)
-    for day, exercises in selected_split.items():
+    plan = generate_plan(selected_split_data)
+    for day, exercises in plan.items():
         st.subheader(day)
         for i, ex in enumerate(exercises, start=1):
             st.write(f"{i}. {ex}")
