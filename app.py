@@ -146,15 +146,14 @@ if st.session_state.generated_plan:
 
     if st.session_state.generated_plan:
         if st.button("Prepare PDF"):
-            st.session_state.show_download = True
-    if st.session_state.show_download:
-        st.download_button(
-            label="Download PDF",
+            st.session_state.pdf_ready = True
+    if st.session_state.get("pdf_ready", False):
+        if st.download_button(label="Download PDF",
             data=plan_to_pdf(st.session_state.generated_plan),
             file_name="WorkoutPlan.pdf",
-            mime="application/pdf"
-        )        
-   
+            mime="application/pdf"):
+            st.session_state.pdf_ready = False
+        
                
         
    # for day, exercises in selected_split_data.items():
