@@ -133,7 +133,16 @@ custom_splits = {
                      ["Seated lateral raises | 12x4"], # Shoulder_isolation
                      ["Seated rear delt fly | 15x4"] # Shoulder_idolation
             ],
-            "Day3": [...],
+            "Day3": [
+                ["Single leg leg extension 12 + both 20 | x4"], # Quad_isolation
+                     ["Concentration db lifts | 20x4"], # Quad_compound
+                     ["Smith squats | 12x4"], # Quad_compound
+                     ["Leg press (narrow) | 12x4"], # Quad_compound
+                     ["DB Lunge | 12x4"], # Quad_compound
+                     ["Cable side leg raise | 15x4"], # Abductor_isolation
+                     ["Standing calve raise machine | 25x4"], # Calve_isolation
+                     ["Seated db calves | 25x4"] # Calve_isolation
+            ],
             "Day4": [
                 ["Lat pull down (wide grip) | 12x4"], # Back_compound
                      ["Row machine | 20x4"], # Back_compound
