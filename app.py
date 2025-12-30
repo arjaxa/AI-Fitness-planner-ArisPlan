@@ -83,17 +83,29 @@ if st.session_state.last_selection != currunt_selection:
 # Generate plan
 import random
 
-def generate_plan(selected_split):
+def generate_plan(selected_split, goal, experience):
     plan = {}
 
     for day, exercises in selected_split.items():
         day_plan = []
 
         for ex in exercises:
+            chosen = random.choice(ex)
             if isinstance(ex, list):
-                day_plan.append(random.choice(ex))
+                if experience == "Beginner":
+                    chosen += " | 2-3 sets"
+                elif experience == "Intermediate":
+                    chosen += " | 3-4 sets"
+                else:
+                    chosen += " | 4-5 sets"
+            
+            if goal == "Strenght":
+                chosen += " | 4-6 reps"
+            elif goal == "Fat Loss":
+                chosen += " | 12-16 reps"
             else:
-                day_plan.append(ex)
+                chosen += " | 8-12 reps"                
+            day_plan.append(chosen)                
 
         plan[day] = day_plan
 
@@ -134,7 +146,7 @@ def plan_to_pdf(plan):
 
 # Generate plan
 if st.button("Generate plan"):
-    st.session_state.generated_plan = generate_plan(selected_split_data)
+    st.session_state.generated_plan = generate_plan(selected_split_data, goal, experience)
     st.session_state.show_download = False
     #st.session_state.pdf_file = None
 
