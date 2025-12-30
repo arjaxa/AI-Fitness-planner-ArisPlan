@@ -168,12 +168,68 @@ custom_splits = {
 
     "6": {
         "6 Days Split (custom1)": {
-            "Day1": [...],
-            "Day2": [...],
-            "Day3": [...],
-            "Day4": [...],
-            "Day5": [...],
-            "Day6": [...]
+             "Day1": [
+                ["Smith squats (wide stance) | 12x4"], # Quad_compound
+                     ["Sumo wide stance db lifts | 20x4"], # Quad_compound
+                     ["RDL | 20x3"], # Hamstring_compound
+                     ["Lying hamstring curls | 12x3"], # Hamstring_isolation
+                     ["BB Hip thrust | 12x4"], # Glute_compound
+                     ["Glute bridge (BB) | 15x4"], # Glute_compound
+                     ["Standing cable hamstring curl | 15x4"], # Hamstring_isolation
+                     ["Smith calf raises | 25x4"] # Calve_isolation
+                     ], 
+              
+            "Day2": [
+                ["Lat pull down (wide grip) | 12x4"], # Back_compound
+                     ["Row machine | 20x4"], # Back_compound
+                     ["Face pull | 12x3"], # Trap_isolation
+                     ["Straight arm | 12x3"], # Lat_isolation
+                     ["DB Fly back | 12x4"], # ReaeDelt_isolation
+                     ["DB Lateral raises | 15x4"], # Shoulder_isolation
+                     ["BB Shoulder press | 15x4"], # Shoulder_compound
+                     ["Seated lateral raises | 12x4"], # Shoulder_isolation
+                     ["Seated rear delt fly | 15x4"] # Shoulder_idolation
+            ],
+            "Day3": [
+                ["Single leg leg extension 12 + both 20 | x4"], # Quad_isolation
+                     ["Concentration db lifts | 20x4"], # Quad_compound
+                     ["Smith squats | 12x4"], # Quad_compound
+                     ["Leg press (narrow) | 12x4"], # Quad_compound
+                     ["DB Lunge | 12x4"], # Quad_compound
+                     ["Cable side leg raise | 15x4"], # Abductor_isolation
+                     ["Standing calve raise machine | 25x4"], # Calve_isolation
+                     ["Seated db calves | 25x4"] # Calve_isolation
+            ],
+            "Day4": [
+                ["Lat pull down (wide grip) | 12x4"], # Back_compound
+                     ["Row machine | 20x4"], # Back_compound
+                     ["Face pull | 12x3"], # Trap_isolation
+                     ["Straight arm | 12x3"], # Lat_isolation
+                     ["DB Fly back | 12x4"], # ReaeDelt_isolation
+                     ["DB Lateral raises | 15x4"], # Shoulder_isolation
+                     ["BB Shoulder press | 15x4"], # Shoulder_compound
+                     ["Seated lateral raises | 12x4"], # Shoulder_isolation
+                     ["Seated rear delt fly | 15x4"] # Shoulder_idolation
+            ],
+            "Day5": [["Cable kick back | 12x4"], # Glute_isolation
+                     ["DB Single leg hip thrusts | 20x4"], # Glute_compound
+                     ["Hip thusts (BB) | 12x4"], # Glute_compound
+                     ["BB RDL | 12x4"], # Hamstring_compound
+                     ["DB Squats (leaning forward) | 12x4"], # Glute_compound
+                     ["Abduction machine | 25x4"], # Glute_isolation
+                     ["Standing straight leg kick backs (short stance) | 20x4"], # Glute_isolation
+                     ["Smith calf raises | 25x4"] # Calve_isolation 
+                     ],
+            "Day6": [
+                ["Single leg leg extension 12 + both 20 | x4"], # Quad_isolation
+                     ["Concentration db lifts | 20x4"], # Quad_compound
+                     ["Smith squats | 12x4"], # Quad_compound
+                     ["Leg press (narrow) | 12x4"], # Quad_compound
+                     ["DB Lunge | 12x4"], # Quad_compound
+                     ["Cable side leg raise | 15x4"], # Abductor_isolation
+                     ["Standing calve raise machine | 25x4"], # Calve_isolation
+                     ["Seated db calves | 25x4"] # Calve_isolation
+            ]
         }
     }
       # more variations...
