@@ -173,17 +173,25 @@ def generate_plan(selected_split):
 
     return plan
 
-if st.button("Generate Plan"):
-    selected_plan = custom_splits[days_per_week][selected_split]
-    for day, exercises_list in selected_plan.items():
+if st.button("Generate plan"):
+    plan = generate_plan(selected_split)
+    for day, exercises in selected_split.items():
         st.subheader(day)
-        for i, exercise_group in enumerate(exercises_list, start=1):
+        for i, ex in enumerate(exercises, start=1):
+            st.write(f"{i}. {ex}")
+
+
+#if st.button("Generate Plan"):
+ #   selected_plan = custom_splits[days_per_week][selected_split]
+  #  for day, exercises_list in selected_plan.items():
+   #     st.subheader(day)
+    #    for i, exercise_group in enumerate(exercises_list, start=1):
             # Pick one random workout from each exercise group
-            if isinstance(exercise_group, list):
-                chosen_ex = random.choice(exercise_group)
-            else:
-                chosen_ex = exercise_group
-            st.write(f"{i}. {chosen_ex}")
+     #       if isinstance(exercise_group, list):
+      #          chosen_ex = random.choice(exercise_group)
+       #     else:
+        #        chosen_ex = exercise_group
+         #   st.write(f"{i}. {chosen_ex}")
 
 
 #    selected_plan = custom_splits[days_per_week][selected_split]
