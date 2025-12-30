@@ -111,7 +111,8 @@ custom_splits = {
 
     "5": {
         "5 Day Split (custom1)": {
-            "Day1": [["Smith squats (wide stance) | 12x4"], # Quad_compound
+            "Day1": [
+                ["Smith squats (wide stance) | 12x4"], # Quad_compound
                      ["Sumo wide stance db lifts | 20x4"], # Quad_compound
                      ["RDL | 20x3"], # Hamstring_compound
                      ["Lying hamstring curls | 12x3"], # Hamstring_isolation
@@ -121,7 +122,17 @@ custom_splits = {
                      ["Smith calf raises | 25x4"] # Calve_isolation
                      ], 
               
-            "Day2": [...],
+            "Day2": [
+                ["Lat pull down (wide grip) | 12x4"], # Back_compound
+                     ["Row machine | 20x4"], # Back_compound
+                     ["Face pull | 12x3"], # Trap_isolation
+                     ["Straight arm | 12x3"], # Lat_isolation
+                     ["DB Fly back | 12x4"], # ReaeDelt_isolation
+                     ["DB Lateral raises | 15x4"], # Shoulder_isolation
+                     ["BB Shoulder press | 15x4"], # Shoulder_compound
+                     ["Seated lateral raises | 12x4"], # Shoulder_isolation
+                     ["Seated rear delt fly | 15x4"] # Shoulder_idolation
+            ],
             "Day3": [...],
             "Day4": [...],
             "Day5": [...]
