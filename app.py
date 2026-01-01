@@ -22,9 +22,9 @@ st.set_page_config(page_title="AI Fitness Planner", page_icon="aris.png")
 st.title("AI Fitness Planner")
 st.write("Plan personalized workouts based on your goals and preferences.")
 
-# --------------------------
-# 1️⃣ EXERCISE DATABASE
-# --------------------------
+
+# EXERCISE DATABASE
+
 exercises = {
     "chest": ["Bench Press", "Incline Dumbbell Press", "Push-ups", "Cable Fly", "Chest Dips"],
     "back": ["Pull-ups", "Deadlift", "Barbell Row", "Lat Pulldown", "Seated Cable Row"],
@@ -36,9 +36,8 @@ exercises = {
     "triceps": ["Tricep Dips", "Overhead Tricep Extension", "Close Grip Bench Press"]
 }
 
-# --------------------------
-# CUSTOM SPLIT BLUEPRINT
-# --------------------------
+
+
 
 # moved to splits.py
 
