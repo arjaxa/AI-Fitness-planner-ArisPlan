@@ -57,18 +57,35 @@ st.header("🦾 Plan Your Routine")
 
 # user goal
 goal = st.selectbox(
-    "What's your main goal?", ["Hyperthrophy (Muscle Gain)", "Strenght", "Fat Loss"]
+    "What's your main goal?", ["Hyperthrophy (Muscle Gain)", "Strength", "Fat Loss"]
 )
+
+goal_map = {
+    "Hyperthrophy (Muscle Gain)": "hypertrophy",
+    "Fat Loss": "fat_loss",
+    "Strength": "strength"
+}
+
+#goal_ui = st.selectbox("What's your main goal?", ["Hyperthrophy (Muscle Gain)", "Strength", "Fat Loss"])
+goal = goal_map[goal]
 
 # experience level
 experience = st.selectbox(
     "Select experience level:", ["Beginner", "Intermediate", "Advanced"]
 )
 
-# Choose number of days
-days_per_week = st.selectbox("How many days a week do you want to work out?", ["3"]) # add 4,5,6 later
+experience_map = {
+    "Beginner": "beginner",
+    "Intermediate": "intermediate",
+    "Advanced": "advanced"
+}
 
-templates = custom_splits[days_per_week][goal][experience]
+experience_key = experience_map[experience]
+
+# Choose number of days
+days_per_week = st.selectbox("How many days a week do you want to work out?", ["3", "4", "5", "6"]) # add 4,5,6 later
+
+templates = custom_splits[days_per_week][goal][experience_key]
 selected_template = random.choice(templates)
 
 
@@ -87,7 +104,7 @@ if st.session_state.last_selection != currunt_selection:
 # Generate plan
 import random
 
-def generate_plan(selected_split, goal, experience):
+def generate_plan(selected_split, goal, experience_key):
     plan = {}
 
     for day, exercises in selected_split.items():
@@ -96,14 +113,14 @@ def generate_plan(selected_split, goal, experience):
         for ex in exercises:
             chosen = random.choice(ex)
             if isinstance(ex, list):
-                if experience == "Beginner":
+                if experience_key == "beginner":
                     chosen += " | 2-3 sets"
-                elif experience == "Intermediate":
+                elif experience_key == "intermediate":
                     chosen += " | 3-4 sets"
                 else:
                     chosen += " | 4-5 sets"
             
-            if goal == "Strenght":
+            if goal == "strenght":
                 chosen += " | 4-6 reps"
             elif goal == "Fat Loss":
                 chosen += " | 12-16 reps"
@@ -150,9 +167,9 @@ def plan_to_pdf(plan):
 
 # Generate plan
 if st.button("Generate plan"):
-    templates = custom_splits[days_per_week][goal][experience]
+    templates = custom_splits[days_per_week][goal][experience_key]
     selected_template = random.choice(templates)
-    st.session_state.generated_plan = generate_plan(selected_template)
+    st.session_state.generated_plan = generate_plan(selected_template, goal, experience_key)
     st.session_state.show_download = False
     #st.session_state.pdf_file = None
 

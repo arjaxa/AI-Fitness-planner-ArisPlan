@@ -1,6 +1,6 @@
 custom_splits = {
     "3": {
-        "hyperthrophy": {
+        "hypertrophy": {
             "beginner": [
                 # split/template 1
                 {
@@ -150,7 +150,7 @@ custom_splits = {
                 }
             ]
         },
-        "strenght": {
+        "strength": {
             "beginner": [
                 # split 1
                 {
@@ -303,21 +303,21 @@ custom_splits = {
     },
 
      "4": {
-        "hyperthrophy": {
+        "hypertrophy": {
             "beginner": [],
             "advanced": []
         }
     },
 
     "5": {
-        "hyperthrophy": {
+        "hypertrophy": {
             "beginner": [],
             "advanced": []
         }
     },
 
     "6": {
-        "hyperthrophy": {
+        "hypertrophy": {
             "beginner": [],
             "advanced": []
         }
