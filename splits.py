@@ -37,7 +37,7 @@ custom_splits = {
             ["Hanging leg raise| 8x3"],
             ["Mountain climbers 12x3"]            
                     ]
-                }
+                },
                 # split 2
                 {
                     "Day 1": [
@@ -111,7 +111,7 @@ custom_splits = {
             ["Hanging leg raise| 8x3"],
             ["Mountain climbers 12x3"]            
                     ]
-                }
+                },
                 # split 2
                 {
                     "Day 1": [
@@ -149,7 +149,7 @@ custom_splits = {
                     ]
                 }
             ]
-        }
+        },
         "strenght": {
             "beginner": [
                 # split 1
@@ -187,7 +187,7 @@ custom_splits = {
             ["Hanging leg raise| 8x3"],
             ["Mountain climbers 12x3"]            
                     ]
-                }
+                },
                 # split 2
                 {
                     "Day 1": [
@@ -261,7 +261,7 @@ custom_splits = {
             ["Hanging leg raise| 8x3"],
             ["Mountain climbers 12x3"]            
                     ]
-                }
+                },
                 # split 2
                 {
                     "Day 1": [
