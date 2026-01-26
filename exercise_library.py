@@ -2,170 +2,171 @@ EXERCISE_LIBRARY = [
     # QUADS
     {
         "name": "Leg Extension",
-        "muscle": "quads",
-        "secondary": [], # complete later/ compound 2-3/ isolation []/ also change muscle to primary in get_exercise()
+        "primary": "quads",
+        "secondary": [], # complete later/ compound 2-3/ isolation []/ also change muscle to primary in get_exercise() or dont
         "type": "isolation",
         "equipment": "machine"
     },
      {
         "name": "Back Squat",
-        "muscle": "quads",
+        "primary": "quads",
+        "secondary": ["glute"],
         "type": "compound",
         "equipment": "barbell"
     },
      {
         "name": "Goblet Squat",
-        "muscle": "quads",
+        "primary": "quads",
         "type": "compound",
         "equipment": "dumbbell"
     },
     {
         "name": "Leg Press",
-        "muscle": "quads",
+        "primary": "quads",
         "type": "compound",
         "equipment": "machine"
     },
      {
         "name": "DB Lunge",
-        "muscle": "quads",
+        "primary": "quads",
         "type": "compound",
         "equipment": "dumbbell"
     },
      {
         "name": "",
-        "muscle": "quads",
+        "primary": "quads",
         "type": "compound",
         "equipment": "dumbbell"
     },
     # HAMSTRING
     {
         "name": "Lying hamstring curls",
-        "muscle": "hamstring",
+        "primary": "hamstring",
         "type": "isolation",
         "equipment": "machine"
     },
      {
         "name": "BB RDL",
-        "muscle": "hamstring",
+        "primary": "hamstring",
         "type": "compound",
         "equipment": "barbell"
     },
      {
         "name": "DB RDL",
-        "muscle": "hamstring",
+        "primary": "hamstring",
         "type": "compound",
         "equipment": "dumbbell"
     },
     {
         "name": "Seated hamstring curl machine",
-        "muscle": "hamstring",
+        "primary": "hamstring",
         "type": "isolation",
         "equipment": "machine"
     },
     # CALVES
      {
         "name": "Standing calf machine",
-        "muscle": "calf",
+        "primary": "calf",
         "type": "isolation",
         "equipment": "machine"
     },
      {
         "name": "Seated calf machine",
-        "muscle": "calf",
+        "primary": "calf",
         "type": "isolation",
         "equipment": "machine"
     },
     # CHEST
      {
         "name": "BB Bench Press",
-        "muscle": "chest",
+        "primary": "chest",
         "type": "compound",
         "equipment": "barbell"
     },
      {
         "name": "DB Bench Press",
-        "muscle": "chest",
+        "primary": "chest",
         "type": "compound",
         "equipment": "dumbbell"
     },
     {
         "name": "Cable fly",
-        "muscle": "chest",
+        "primary": "chest",
         "type": "isolation",
         "equipment": "cable"
     },
      {
         "name": "DB Fly",
-        "muscle": "chest",
+        "primary": "chest",
         "type": "isolation",
         "equipment": "dumbbell"
     },
     # SHOULDER
      {
         "name": "BB Shoulder Press",
-        "muscle": "shoulder",
+        "primary": "shoulder",
         "type": "compound",
         "equipment": "barbell"
     },
      {
         "name": "DB Shoulder Press",
-        "muscle": "shoulder",
+        "primary": "shoulder",
         "type": "isolation",
         "equipment": "dumbbell"
     },
     {
         "name": "Cable lateral raise",
-        "muscle": "shoulder",
+        "primary": "shoulder",
         "type": "isolation",
         "equipment": "cable"
     },
      {
         "name": "DB Fly back",
-        "muscle": "shoulder",
+        "primary": "shoulder",
         "type": "isolation",
         "equipment": "dumbbell"
     },
     # TRICEPS
       {
         "name": "BB Skull Crusher",
-        "muscle": "triceps",
+        "primary": "triceps",
         "type": "compound",
         "equipment": "barbell"
     },
      {
         "name": "DB Tricep Kickback",
-        "muscle": "triceps",
+        "primary": "triceps",
         "type": "isolation",
         "equipment": "dumbbell"
     },
     {
         "name": "Cable Rope Tricep Pushdown",
-        "muscle": "triceps",
+        "primary": "triceps",
         "type": "isolation",
         "equipment": "cable"
     },
      {
         "name": "Tricep Dips",
-        "muscle": "triceps",
+        "primary": "triceps",
         "type": "compound",
         "equipment": "bodyweight"
     },
     # BACK
     {
         "name": "Lat Pulldown",
-        "muscle": "back",
+        "primary": "back",
         "type": "compound",
         "equipment": "machine"
     },
     {
         "name": "Seated Cable Row",
-        "muscle": "back",
+        "primary": "back",
         "type": "compound",
         "equipment": "cable"
     },
     {
         "name": "Pull-up",
-        "muscle": "back",
+        "primary": "back",
         "type": "compound",
         "equipment": "bodyweight"
     }
@@ -181,7 +182,7 @@ import random
 
 def get_exercise(muscle, ex_type=None, equipment=None):
     candidates = [
-        ex for ex in EXERCISE_LIBRARY if ex["muscle"] == muscle
+        ex for ex in EXERCISE_LIBRARY if ex["primary"] == muscle # changed "muscle" to "primary"
     ]
 
     if ex_type:

@@ -106,7 +106,7 @@ def generate_plan(selected_split, goal, experience_key):
         day_plan = []
 
         for muscle, ex_type, equipment in exercises:
-            exercise = get_exercise(muscle, ex_type, equipment)
+            exercise = get_exercise(muscle, ex_type, equipment) # change muscle to primary?
             name = exercise["name"]
 
             # sets
