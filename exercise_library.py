@@ -3,7 +3,7 @@ EXERCISE_LIBRARY = [
     {
         "name": "Leg Extension",
         "primary": "quads",
-        "secondary": [], # complete later/ compound 2-3/ isolation []/ also change muscle to primary in get_exercise() or dont
+        "secondary": [], 
         "type": "isolation",
         "equipment": "machine",
         "fatigue": 1
