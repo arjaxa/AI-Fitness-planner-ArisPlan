@@ -90,20 +90,7 @@ from ai_engine import should_superset
 
 
 def generate_plan(selected_split, goal, experience_key):
-    """
-OUTPUT CONTRACT (DO NOT CHANGE):
-
-generate_plan() returns:
-dict[str, list[dict]]
-
-Each exercise dict contains:
-- name
-- primary_muscle
-- secondary_muscle
-- sets
-- reps
-- type
-"""
+    
 
     plan = {}
 
