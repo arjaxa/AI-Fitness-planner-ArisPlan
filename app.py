@@ -109,11 +109,11 @@ def generate_plan(selected_split, goal, experience_key):
 
             # reps
             if goal == "strength":
-                reps = "4-6 reps"
+                reps = random.choice([4, 5, 6])
             elif goal == "fat_loss":
-                reps = "12-16 reps"
-            else:
-                reps = "8-12 reps"
+                reps = random.choice([12, 15, 16])
+            else: # hyperthrophy
+                reps = random.choice([8, 10, 12])
 
             final_exercise = {
                 "name": exercise["name"],
