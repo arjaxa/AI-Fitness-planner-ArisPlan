@@ -282,7 +282,7 @@ EXERCISE_LIBRARY = [
         "fatigue": 2,
         "pattern": "squat"
     },
-    # HAMSTRING
+    # HAMSTRING / machine
     {
         "name": "Lying hamstring curls",
         "primary": "hamstring",
@@ -291,24 +291,6 @@ EXERCISE_LIBRARY = [
         "equipment": "machine",
         "fatigue": 1,
         "pattern": "curl"
-    },
-     {
-        "name": "BB RDL",
-        "primary": "hamstring",
-        "secondary": ["glute", "lowerback"],
-        "type": "compound",
-        "equipment": "barbell",
-        "fatigue": 3,
-        "pattern": "hinge"
-    },
-     {
-        "name": "DB RDL",
-        "primary": "hamstring",
-        "secondary": ["glute"],
-        "type": "compound",
-        "equipment": "dumbbell",
-        "fatigue": 2,
-        "pattern": "hinge"
     },
     {
         "name": "Seated hamstring curl machine",
@@ -319,6 +301,48 @@ EXERCISE_LIBRARY = [
         "fatigue": 1,
         "pattern": "curl"
     },
+    {
+        "name": "Smith RDL",
+        "primary": "hamstring",
+        "secondary": ["glute", "lowerback"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "lift"
+    },
+    {
+        "name": "Smith stiff-leg deadlift",
+        "primary": "hamstring",
+        "secondary": ["glute", "lowerback"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "lift"
+    },
+
+    # Barbell
+    {
+        "name": "BB RDL",
+        "primary": "hamstring",
+        "secondary": ["glute", "lowerback"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "hinge"
+    },
+
+    # Dumbbell
+
+     {
+        "name": "DB RDL",
+        "primary": "hamstring",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "hinge"
+    },
+
     # CALVES
      {
         "name": "Standing calf machine",
