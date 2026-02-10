@@ -82,6 +82,25 @@ if st.session_state.last_selection != currunt_selection:
     st.session_state.generated_plan = None
     st.session_state.last_selection = currunt_selection
 
+# sets function
+def get_random_sets(experience_key):
+    if experience_key == "beginner":
+        return random.choice([2, 3])
+    elif experience_key == "intermediate":
+        return random.choice([3, 4])
+    else: # advanced
+        return random.choice([4, 5])
+
+# reps function
+def get_random_reps(goal):
+    if goal == "strength":
+        return random.choice([4, 5, 6])
+    elif goal == "fat_loss":
+        return random.choice([12, 15, 16])
+    else: # hyperthrophy
+        return random.choice([8, 10, 12])
+
+
 # Generate plan   
 import random
 
@@ -100,29 +119,17 @@ def generate_plan(selected_split, goal, experience_key):
             exercise = get_exercise(muscle, ex_type, equipment)
 
             # sets
-            if experience_key == "beginner":
-                sets = random.choice([2, 3])
-            elif experience_key == "intermediate":
-                sets = random.choice([3, 4])
-            else:
-                sets = random.choice([4, 5])        
+            # removed        
 
             # reps
-            if goal == "strength":
-                reps = random.choice([4, 5, 6])
-            elif goal == "fat_loss":
-                reps = random.choice([12, 15, 16])
-            else: # hyperthrophy
-                reps = random.choice([8, 10, 12])
+            # removed
 
             final_exercise = {
                 "name": exercise["name"],
                 "primary": exercise["primary"],
                 "secondary": exercise["secondary"],
                 "type": exercise["type"],
-                "equipment": exercise["equipment"],
-                "sets": sets,
-                "reps": reps
+                "equipment": exercise["equipment"]
             }
 
             day_plan.append(final_exercise)
@@ -135,9 +142,15 @@ def generate_plan(selected_split, goal, experience_key):
 
             # last exercise must be single
             if i == len(day_plan) - 1:
+
+                ex = day_plan[i]
+
+                ex["sets"] = get_random_sets(experience_key)
+                ex["reps"] = get_random_reps(goal)
+
                 grouped_plan.append({
                     "mode": "single",
-                    "exercises": [day_plan[i]]
+                    "exercises": [ex]
                 })
                 break
 
@@ -145,6 +158,14 @@ def generate_plan(selected_split, goal, experience_key):
             ex2 = day_plan[i + 1]
 
             if should_superset(ex1, ex2):
+
+                shared_sets = get_random_sets(experience_key)
+
+                ex1["sets"] = shared_sets
+                ex2["sets"] = shared_sets
+
+                ex1["reps"] = get_random_reps(goal)
+                ex2["reps"] = get_random_reps(goal)
 
                 grouped_plan.append({
                     "mode": "superset",
@@ -155,9 +176,14 @@ def generate_plan(selected_split, goal, experience_key):
 
             else:
 
+                ex = day_plan[i]
+
+                ex["sets"] = get_random_sets(experience_key)
+                ex["reps"] = get_random_reps(goal)
+
                 grouped_plan.append({
                     "mode": "single",
-                    "exercises": [ex1]
+                    "exercises": [ex]
                 })
 
                 i += 1
@@ -254,13 +280,15 @@ if st.session_state.generated_plan:
             elif group["mode"] == "superset":
 
                 ex1, ex2 = group["exercises"]
+
                 # superset workout
+
                 st.markdown(
                     f"""
                    <strong>{workout_number}. {ex['name']}</strong>
-                   <span style='float:right'>{ex['sets']} x {ex['reps']}</span>
+                   <span style='float:right'>{ex1['sets']} x {ex1['reps']}</span><br>
 
-                   **+ {ex2['name']}**
+                   <strong>+ {ex2['name']}</strong>
                    <span style='float:right'>{ex2['sets']} x {ex2['reps']}</span>
                    """,
                     unsafe_allow_html=True
