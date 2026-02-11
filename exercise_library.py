@@ -382,6 +382,33 @@ EXERCISE_LIBRARY = [
         "fatigue": 2,
         "pattern": "hinge"
     },
+    {
+        "name": "Cable RDL",
+        "primary": "hamstring",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "lift"
+    },
+    {
+        "name": "Cable straight-leg deadlift",
+        "primary": "hamstring",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "lift"
+    },
+    {
+        "name": "Cable reverse lunge",
+        "primary": "hamstring",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "lunge"
+    },
 
     # Barbell
     {
@@ -404,6 +431,69 @@ EXERCISE_LIBRARY = [
         "equipment": "dumbbell",
         "fatigue": 2,
         "pattern": "hinge"
+    },
+    {
+        "name": "DB Single-leg RDL",
+        "primary": "hamstring",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "lift"
+    },
+    {
+        "name": "DB Stiff-leg deadlift",
+        "primary": "hamstring",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "lift"
+    },
+    {
+        "name": "DB Single-leg deadlift",
+        "primary": "hamstring",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "lift"
+    },
+    {
+        "name": "DB Good morning",
+        "primary": "hamstring",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "hinge"
+    },
+    {
+        "name": "DB Reverse lunge",
+        "primary": "hamstring",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "lunge"
+    },
+    {
+        "name": "DB Bulgarian split squat",
+        "primary": "glute",
+        "secondary": ["hamstring"],
+        "type": "compound",
+        "equipment": "dumbbell",
+        "fatigue": 3,
+        "pattern": "lunge"
+    },
+    {
+        "name": "DB Lying leg curl",
+        "primary": "hamstring",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "curl"
     },
 
     # CALVES
