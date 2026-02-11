@@ -1235,7 +1235,7 @@ EXERCISE_LIBRARY = [
         "secondary": [],
         "type": "isolation",
         "equipment": "dumbbell",
-        "fatigue": 2,# later...
+        "fatigue": 2,# later...back/bi/tri/for/abs/gl
         "pattern": "row"
     },
     {
