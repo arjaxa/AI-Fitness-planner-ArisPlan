@@ -319,6 +319,69 @@ EXERCISE_LIBRARY = [
         "fatigue": 3,
         "pattern": "lift"
     },
+    {
+        "name": "Conventional deadlift",
+        "primary": "hamstring",
+        "secondary": ["lowerback"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "lift"
+    },
+    {
+        "name": "Sumo deadlift",
+        "primary": "hamstring",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "lift"
+    },
+    {
+        "name": "Single-leg romanian deadlift",
+        "primary": "hamstring",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "lift"
+    },
+    {
+        "name": "Smith good morning",
+        "primary": "hamstring",
+        "secondary": ["glute", "lowerback"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "hinge"
+    },
+    {
+        "name": "Hack good morning",
+        "primary": "hamstring",
+        "secondary": ["glute", "lowerback"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "hinge"
+    },
+    {
+        "name": "Standing single-leg curl (cable)",
+        "primary": "hamstring",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "curl"
+    },
+    {
+        "name": "Cable pull-through",
+        "primary": "hamstring",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "hinge"
+    },
 
     # Barbell
     {
