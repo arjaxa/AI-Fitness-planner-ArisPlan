@@ -414,12 +414,76 @@ EXERCISE_LIBRARY = [
     {
         "name": "BB RDL",
         "primary": "hamstring",
-        "secondary": ["glute", "lowerback"],
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "lift"
+    },
+    {
+        "name": "BB stiff-leg deadlift",
+        "primary": "hamstring",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "lift"
+    },
+    {
+        "name": "BB sumo deadlift",
+        "primary": "hamstring",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "lift"
+    },
+    {
+        "name": "BB single-leg RDL",
+        "primary": "hamstring",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 2,
+        "pattern": "lift"
+    },
+    {
+        "name": "BB good morning",
+        "primary": "hamstring",
+        "secondary": ["glute"],
         "type": "compound",
         "equipment": "barbell",
         "fatigue": 3,
         "pattern": "hinge"
     },
+    {
+        "name": "BB RDL",
+        "primary": "hamstring",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "lift"
+    },
+    {
+        "name": "BB deficit RDL",
+        "primary": "hamstring",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "barbell",
+        "fatigue": 2,
+        "pattern": "lift"
+    },
+    {
+        "name": "BB reverse lunge",
+        "primary": "hamstring",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 2,
+        "pattern": "lunge"
+    },
+
 
     # Dumbbell
 
