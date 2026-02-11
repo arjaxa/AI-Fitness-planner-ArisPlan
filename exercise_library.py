@@ -762,6 +762,15 @@ EXERCISE_LIBRARY = [
         "fatigue": 1,
         "pattern": "fly"
     },
+    {
+        "name": "Fly machine",
+        "primary": "chest",
+        "secondary": ["shoulder"],
+        "type": "isolation",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "fly"
+    },
     # SHOULDER
      {
         "name": "BB Shoulder Press",
@@ -799,6 +808,7 @@ EXERCISE_LIBRARY = [
         "fatigue": 2,
         "pattern": "press"
     },
+    # FRONT
     {
         "name": "Seated DB front raise",
         "primary": "shoulder_f",
@@ -889,6 +899,7 @@ EXERCISE_LIBRARY = [
         "fatigue": 2,
         "pattern": "raise"
     },
+    # REAR DELT
      {
         "name": "DB Fly back",
         "primary": "shoulder_r",
@@ -932,6 +943,15 @@ EXERCISE_LIBRARY = [
         "type": "isolation",
         "equipment": "cable",
         "fatigue": 1,
+        "pattern": "fly"
+    },
+    {
+        "name": "Reverse fly machine",
+        "primary": "shoulder_r",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
         "pattern": "fly"
     },
     {
@@ -988,16 +1008,234 @@ EXERCISE_LIBRARY = [
         "secondary": ["biceps"],
         "type": "compound",
         "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "pulldown"
+    },
+    {
+        "name": "Alternating lat Pulldown",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "machine",
         "fatigue": 2,
         "pattern": "pulldown"
     },
     {
-        "name": "Seated Cable Row",
+        "name": "Reverse lat Pulldown",
         "primary": "back",
         "secondary": ["biceps"],
         "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "pulldown"
+    },
+    {
+        "name": "Reverse lat Pulldown (narrow grip)",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "pulldown"
+    },
+    {
+        "name": "Lat Pulldown (wide grip)",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "pulldown"
+    },
+    {
+        "name": "Reverse-grip lat Pulldown",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "pulldown"
+    },
+    {
+        "name": "V-bar lat Pulldown",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "pulldown"
+    },
+    {
+        "name": "Single-arm lat Pulldown (D-handle)",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "pulldown"
+    },
+    {
+        "name": "Straight arm Pulldown",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "pulldown"
+    },
+    {
+        "name": "Rope lat Pulldown",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "pulldown"
+    },
+    {
+        "name": "Row machine (V-handle)",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "row"
+    },
+    {
+        "name": "Row machine (reverse grip)",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "row"
+    },
+    {
+        "name": "Single arm row machine (D-handle)",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "row"
+    },
+    {
+        "name": "H machine (reverse grip)",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "row"
+    },
+    {
+        "name": "H machine",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "row"
+    },
+    {
+        "name": "H machine (parallel grip)",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "row"
+    },
+
+    
+    {
+        "name": "Seated Cable(D-handle) Row",
+        "primary": "back",
+        "secondary": [],
+        "type": "isolation",
         "equipment": "cable",
         "fatigue": 2,
+        "pattern": "row"
+    },
+    {
+        "name": "Cable rope pulldown",
+        "primary": "back",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "pulldown"
+    },
+    {
+        "name": "Cable straight arm pulldown",
+        "primary": "back",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "pulldown"
+    },
+    {
+        "name": "Cable single arm pulldown",
+        "primary": "back",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "pulldown"
+    },
+    {
+        "name": "BB row",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "row"
+    },
+    {
+        "name": "Smith row",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "row"
+    },
+    {
+        "name": "BB row (reverse grip)",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "row"
+    },
+    {
+        "name": "Smith row (reverse grip)",
+        "primary": "back",
+        "secondary": ["biceps"],
+        "type": "compound",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "row"
+    },
+    {
+        "name": "DB row",
+        "primary": "back",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "row"
+    },
+    {
+        "name": "DB row (single arm)",
+        "primary": "back",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,# later...
         "pattern": "row"
     },
     {
