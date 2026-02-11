@@ -293,6 +293,15 @@ EXERCISE_LIBRARY = [
         "pattern": "curl"
     },
     {
+        "name": "Reverse hack squat",
+        "primary": "hamstring",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 3,
+        "pattern": "squat"
+    },
+    {
         "name": "Seated hamstring curl machine",
         "primary": "hamstring",
         "secondary": [],
@@ -597,6 +606,71 @@ EXERCISE_LIBRARY = [
         "fatigue": 1,
         "pattern": "calf"
     },
+    # ABDUCTOR/ADDUCTOR
+    {
+        "name": "Seated abduction machine",
+        "primary": "abductor",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "abduction"
+    },
+    {
+        "name": "Seated abduction machine (Leaning forward)",
+        "primary": "abductor",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "abduction"
+    },
+    {
+        "name": "Seated cable abduction (single leg)",
+        "primary": "abductor",
+        "secondary": ["glute"],
+        "type": "compound",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "abduction"
+    },
+    {
+        "name": "Seated adduction machine",
+        "primary": "adductor",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "machine",
+        "fatigue": 2,
+        "pattern": "adduction"
+    },
+    {
+        "name": "Standing cable leg raise",
+        "primary": "abductor",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "abduction"
+    },
+    {
+        "name": "Seated cable leg abduction",
+        "primary": "abductor",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "abduction"
+    },
+    {
+        "name": "Seated cable leg adduction",
+        "primary": "adductor",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "adduction"
+    },
+
     # CHEST
      {
         "name": "BB Bench Press",
