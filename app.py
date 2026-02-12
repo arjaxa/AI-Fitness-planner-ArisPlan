@@ -117,11 +117,28 @@ def generate_plan(selected_split, goal, experience_key):
 
     for day, exercises in selected_split.items():
         day_plan = []
+        used_exercises = set()
         used_patterns = set()
 
         for muscle, ex_type, equipment in exercises:
             for _ in range(10):
-                exercise = get_exercise(muscle, ex_type, equipment)
+                attempts = 0
+                max_attempts = 10
+                while attempts < max_attempts:
+                    exercise = get_exercise(
+                        muscle,
+                        ex_type,
+                        equipment,
+                        used_exercises
+                    )
+                    if exercise["name"] not in used_exercises:
+                        used_exercises.add(exercise["name"])
+                        break
+                    attempts += 1
+                if attempts == max_attempts:
+                    exercise = get_exercise(muscle, ex_type, equipment)    
+
+                
                 if exercise["pattern"] not in used_patterns:
                     used_patterns.add(exercise["pattern"])
                     break
@@ -159,6 +176,14 @@ def generate_plan(selected_split, goal, experience_key):
 
             ex1 = day_plan[i]
             ex2 = day_plan[i + 1]
+
+            if ex1["name"] == ex2["name"]:
+                grouped_plan.append({
+                    "mode": "single",
+                    "exercises": [ex1]
+                    })
+                i += 1
+                continue
 
             if should_superset(ex1, ex2):
 

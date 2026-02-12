@@ -7,7 +7,7 @@ custom_splits = {
                     "Day 1": [
             ("chest", "compound", "barbell"),
             ("chest", "isolation", "cable"),
-            ("chest", "isolation", "dumbbell"),
+            ("chest", "isolation", "machine"),
             ("shoulder", "compound", "barbell"),
             ("shoulder", "isolation", "cable"),
             ("shoulder", "isolation", "dumbbell"),
@@ -34,7 +34,7 @@ custom_splits = {
                 {
                     "Day 1": [
             ("chest", "compound", "barbell"),
-            ("chest", "isolation", "cable"),
+            ("chest", "isolation", "machine"),
             ("chest", "isolation", "dumbbell"),
             ("shoulder", "compound", "barbell"),
             ("shoulder", "isolation", "cable"),

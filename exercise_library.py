@@ -874,7 +874,7 @@ EXERCISE_LIBRARY = [
         "pattern": "fly"
     },
      {
-        "name": "DB Fly",
+        "name": "DB bench fly",
         "primary": "chest",
         "secondary": ["shoulder"],
         "type": "isolation",
@@ -1494,21 +1494,50 @@ EXERCISE_LIBRARY = [
 
 import random
 
+def get_exercise(muscle, ex_type=None, equipment=None, used_exercises=None):
 
-def get_exercise(muscle, ex_type=None, equipment=None):
+
     candidates = [
-        ex for ex in EXERCISE_LIBRARY if ex["primary"] == muscle # changed "muscle" to "primary"
+        ex for ex in EXERCISE_LIBRARY
+        if ex["primary"] == muscle
+        and (ex_type is None or ex["type"] == ex_type)
+        and (equipment is None or ex["equipment"] == equipment)
     ]
 
-    if ex_type:
-        candidates = [ex for ex in candidates if ex["type"] == ex_type]
+    
+    if used_exercises:
+        candidates = [
+            ex for ex in candidates
+            if ex["name"] not in used_exercises
+        ]
 
-    if equipment:
-        candidates = [ex for ex in candidates if ex["equipment"] == equipment]
-
+    
     if not candidates:
-        raise ValueError(
-            f"No exercise found for {muscle}, {ex_type}, {equipment}"
-        )
+        candidates = [
+            ex for ex in EXERCISE_LIBRARY
+            if ex["primary"] == muscle
+            and (ex_type is None or ex["type"] == ex_type)
+            and ex["name"] not in (used_exercises or set())
+        ]
 
-    return random.choice(candidates)
+    
+    if not candidates:
+        candidates = [
+            ex for ex in EXERCISE_LIBRARY
+            if ex["primary"] == muscle
+            and ex["name"] not in (used_exercises or set())
+        ]
+
+    
+    if not candidates:
+        candidates = [
+            ex for ex in EXERCISE_LIBRARY
+            if ex["primary"] == muscle
+        ]
+
+    choice = random.choice(candidates)
+
+    if used_exercises is not None:
+        used_exercises.add(choice["name"])
+
+    return choice
