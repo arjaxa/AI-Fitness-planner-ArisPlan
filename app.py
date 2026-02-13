@@ -110,115 +110,90 @@ import random
 validate_template(selected_template)
 from ai_engine import should_superset
 
+from copy import deepcopy
+import random
+
 
 def generate_plan(selected_split, goal, experience_key):
 
     plan = {}
 
     for day, exercises in selected_split.items():
+
+        used_exercises_today = set()
         day_plan = []
-        used_exercises = set()
-        used_patterns = set()
 
         for muscle, ex_type, equipment in exercises:
-            for _ in range(10):
-                attempts = 0
-                max_attempts = 10
-                while attempts < max_attempts:
-                    exercise = get_exercise(
-                        muscle,
-                        ex_type,
-                        equipment,
-                        used_exercises
-                    )
-                    if exercise["name"] not in used_exercises:
-                        used_exercises.add(exercise["name"])
-                        break
-                    attempts += 1
-                if attempts == max_attempts:
-                    exercise = get_exercise(muscle, ex_type, equipment)    
 
-                
-                if exercise["pattern"] not in used_patterns:
-                    used_patterns.add(exercise["pattern"])
-                    break
+            exercise = get_exercise(
+                muscle,
+                ex_type,
+                equipment,
+                used_exercises_today
+            )
 
+            used_exercises_today.add(exercise["name"])
 
-            final_exercise = {
+            day_plan.append({
                 "name": exercise["name"],
                 "primary": exercise["primary"],
                 "secondary": exercise["secondary"],
                 "type": exercise["type"],
                 "equipment": exercise["equipment"]
-            }
+            })
 
-            day_plan.append(final_exercise)
 
-        # grouping
+
+        remaining = deepcopy(day_plan)
         grouped_plan = []
-        i = 0
 
-        while i < len(day_plan):
+        while remaining:
 
-            # last exercise must be single
-            if i == len(day_plan) - 1:
+            ex1 = remaining.pop(0)  
 
-                ex = day_plan[i]
+            partner_index = None
 
-                ex["sets"] = get_random_sets(experience_key)
-                ex["reps"] = get_random_reps(goal)
+            # pairing
+            for idx, ex2 in enumerate(remaining):
 
-                grouped_plan.append({
-                    "mode": "single",
-                    "exercises": [ex]
-                })
-                break
+                if should_superset(ex1, ex2):
+                    partner_index = idx
+                    break
 
-            ex1 = day_plan[i]
-            ex2 = day_plan[i + 1]
+            # superset...
+            if partner_index is not None:
 
-            if ex1["name"] == ex2["name"]:
-                grouped_plan.append({
-                    "mode": "single",
-                    "exercises": [ex1]
-                    })
-                i += 1
-                continue
-
-            if should_superset(ex1, ex2):
+                ex2 = remaining.pop(partner_index)
 
                 shared_sets = get_random_sets(experience_key)
+                shared_reps = get_random_reps(goal)
 
                 ex1["sets"] = shared_sets
                 ex2["sets"] = shared_sets
-
-                ex1["reps"] = get_random_reps(goal)
-                ex2["reps"] = get_random_reps(goal)
+                ex1["reps"] = shared_reps
+                ex2["reps"] = shared_reps
 
                 grouped_plan.append({
                     "mode": "superset",
                     "exercises": [ex1, ex2]
                 })
 
-                i += 2  # skip next because it was paired
-
+            
             else:
 
-                ex = day_plan[i]
-
-                ex["sets"] = get_random_sets(experience_key)
-                ex["reps"] = get_random_reps(goal)
+                ex1["sets"] = get_random_sets(experience_key)
+                ex1["reps"] = get_random_reps(goal)
 
                 grouped_plan.append({
                     "mode": "single",
-                    "exercises": [ex]
+                    "exercises": [ex1]
                 })
 
-                i += 1
 
         plan[day] = grouped_plan
 
     return plan
+
 
 
 
@@ -288,43 +263,54 @@ if st.button("Generate plan"):
 
 # Display plan
 if st.session_state.generated_plan:
-    for day, exercises in st.session_state.generated_plan.items():
+
+    for day, groups in st.session_state.generated_plan.items():
+
         st.subheader(day)
         workout_number = 1
 
-        for group in exercises:
+        for group in groups:
 
+            # single workouts
             if group["mode"] == "single":
+
                 ex = group["exercises"][0]
-                # single workout
+
                 st.markdown(
                     f"""
-                    <strong>{workout_number}. {ex['name']}</strong>
-                    <span style='float:right'>{ex['sets']} x {ex['reps']}</span>
+                    **{workout_number}. {ex['name']}**
+                    <span style='float:right'>
+                    {ex['sets']} x {ex['reps']}
+                    </span>
                     """,
                     unsafe_allow_html=True
                 )
 
+
+            # supersets
             elif group["mode"] == "superset":
 
                 ex1, ex2 = group["exercises"]
 
-                # superset workout
-
                 st.markdown(
                     f"""
-                   <strong>{workout_number}. {ex['name']}</strong>
-                   <span style='float:right'>{ex1['sets']} x {ex1['reps']}</span><br>
+                    **{workout_number}. {ex1['name']}**
+                    <span style='float:right'>
+                    {ex1['sets']} x {ex1['reps']}
+                    </span>
 
-                   <strong>+ {ex2['name']}</strong>
-                   <span style='float:right'>{ex2['sets']} x {ex2['reps']}</span>
-                   """,
+                    **+ {ex2['name']}**
+                    <span style='float:right'>
+                    {ex2['sets']} x {ex2['reps']}
+                    </span>
+                    """,
                     unsafe_allow_html=True
                 )
 
             workout_number += 1
 
         st.divider()
+
 
     
         
