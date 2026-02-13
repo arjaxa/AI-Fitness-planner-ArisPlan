@@ -10,7 +10,10 @@ data = [
     ["chest", "back", 1],
     ["biceps", "triceps", 1],
     ["quads", "hamstrings", 1],
-    ["shoulders", "back", 1],
+    ["shoulder", "back", 1],
+    ["shoulder", "shoulder_f", 1],
+    ["shoulder_f", "shoulder_l", 1],
+    ["shoulder_l", "shoulder_r", 1],
     ["chest", "biceps", 1],
     ["hamstrings", "glute", 1],
 
