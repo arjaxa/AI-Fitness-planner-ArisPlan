@@ -2,7 +2,7 @@
 
 A smart workout generator that builds structured, goal-oriented training plans in seconds.
 
-The Arisplan creates personalized gym routines based on user goals, experience level, and preferred training split — then exports the plan as a clean PDF.
+Arisplan creates personalized gym routines based on user goals, experience level, and preferred training split — then exports the plan as a clean PDF.
 
 ---
 
