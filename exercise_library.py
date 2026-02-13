@@ -617,7 +617,7 @@ EXERCISE_LIBRARY = [
         "pattern": "lunge"
     },
     {
-        "name": "BB bulgarian split squats",
+        "name": "BB split squats",
         "primary": "glute",
         "secondary": [],
         "type": "isolation",

@@ -1612,9 +1612,1144 @@ custom_splits = {
 
     "5": {
         "hypertrophy": {
-            "beginner": [],
-            "intermediate": [],
-            "advanced": []
+            "beginner": [
+                # split 1
+                {
+                 "Day 1": [
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder_r", "isolation", "cable"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable"),
+            
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "barbell"),
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("quads", "isolation", "machine"),
+            ("abductor", "isolation", "machine"),
+            ("abductor", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")            
+                    ],
+                    "Day 3": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "barbell"),
+            ("back", "isolation", "cable"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("biceps", "isolation", "cable"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                    "Day 4": [
+            ("hamstring", "isolation", "dumbbell"),            
+            ("hamstring", "compound", "barbell"),
+            ("hamstring", "compound", "machine"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("glute", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),            
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("glute", "isolation", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight")
+                    ] 
+                },
+                # split 2
+                {
+                 "Day 1": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("back", "isolation", "cable"),
+            ("shoulder", "compound", "machine"),
+            ("shoulder_l", "isolation", "cable"),
+            ("chest", "compound", "dumbbell"),
+            ("chest", "compound", "barbell"),
+            ("triceps", "isolation", "dumbbell"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable")
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "barbell"),
+            ("quads", "isolation", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("abductor", "isolation", "machine"),
+            ("adductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")           
+                    ],
+                    "Day 3": [
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("biceps", "isolation", "barbell"),
+            ("biceps", "isolation", "dumbbell"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                      "Day 4": [
+            ("hamstring", "compound", "barbell"),
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "compound", "machine"),
+            ("hamstring", "compound", "cable"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ]
+                }
+            ],
+            "intermediate": [
+                # split 1
+                {
+                 "Day 1": [
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder_r", "isolation", "cable"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable"),
+            
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "barbell"),
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("quads", "isolation", "machine"),
+            ("abductor", "isolation", "machine"),
+            ("abductor", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")            
+                    ],
+                    "Day 3": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "barbell"),
+            ("back", "isolation", "cable"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("biceps", "isolation", "cable"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                    "Day 4": [
+            ("hamstring", "isolation", "dumbbell"),            
+            ("hamstring", "compound", "barbell"),
+            ("hamstring", "compound", "machine"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("glute", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),            
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("glute", "isolation", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight")
+                    ] 
+                },
+                # split 2
+                {
+                 "Day 1": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("back", "isolation", "cable"),
+            ("shoulder", "compound", "machine"),
+            ("shoulder_l", "isolation", "cable"),
+            ("chest", "compound", "dumbbell"),
+            ("chest", "compound", "barbell"),
+            ("triceps", "isolation", "dumbbell"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable")
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "barbell"),
+            ("quads", "isolation", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("abductor", "isolation", "machine"),
+            ("adductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")           
+                    ],
+                    "Day 3": [
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("biceps", "isolation", "barbell"),
+            ("biceps", "isolation", "dumbbell"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                      "Day 4": [
+            ("hamstring", "compound", "barbell"),
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "compound", "machine"),
+            ("hamstring", "compound", "cable"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ]
+                }
+            ],
+            "advanced": [
+                # split 1
+                {
+                 "Day 1": [
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder_r", "isolation", "cable"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable"),
+            
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "barbell"),
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("quads", "isolation", "machine"),
+            ("abductor", "isolation", "machine"),
+            ("abductor", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")            
+                    ],
+                    "Day 3": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "barbell"),
+            ("back", "isolation", "cable"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("biceps", "isolation", "cable"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                    "Day 4": [
+            ("hamstring", "isolation", "dumbbell"),            
+            ("hamstring", "compound", "barbell"),
+            ("hamstring", "compound", "machine"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("glute", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),            
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("glute", "isolation", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight")
+                    ] 
+                },
+                # split 2
+                {
+                 "Day 1": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("back", "isolation", "cable"),
+            ("shoulder", "compound", "machine"),
+            ("shoulder_l", "isolation", "cable"),
+            ("chest", "compound", "dumbbell"),
+            ("chest", "compound", "barbell"),
+            ("triceps", "isolation", "dumbbell"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable")
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "barbell"),
+            ("quads", "isolation", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("abductor", "isolation", "machine"),
+            ("adductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")           
+                    ],
+                    "Day 3": [
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("biceps", "isolation", "barbell"),
+            ("biceps", "isolation", "dumbbell"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                      "Day 4": [
+            ("hamstring", "compound", "barbell"),
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "compound", "machine"),
+            ("hamstring", "compound", "cable"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ]
+                }
+            ]
+        },
+        "strength": {
+            "beginner": [
+                # split 1
+                {
+                 "Day 1": [
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder_r", "isolation", "cable"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable"),
+            
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "barbell"),
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("quads", "isolation", "machine"),
+            ("abductor", "isolation", "machine"),
+            ("abductor", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")            
+                    ],
+                    "Day 3": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "barbell"),
+            ("back", "isolation", "cable"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("biceps", "isolation", "cable"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                    "Day 4": [
+            ("hamstring", "isolation", "dumbbell"),            
+            ("hamstring", "compound", "barbell"),
+            ("hamstring", "compound", "machine"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("glute", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),            
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("glute", "isolation", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight")
+                    ] 
+                },
+                # split 2
+                {
+                 "Day 1": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("back", "isolation", "cable"),
+            ("shoulder", "compound", "machine"),
+            ("shoulder_l", "isolation", "cable"),
+            ("chest", "compound", "dumbbell"),
+            ("chest", "compound", "barbell"),
+            ("triceps", "isolation", "dumbbell"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable")
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "barbell"),
+            ("quads", "isolation", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("abductor", "isolation", "machine"),
+            ("adductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")           
+                    ],
+                    "Day 3": [
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("biceps", "isolation", "barbell"),
+            ("biceps", "isolation", "dumbbell"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                      "Day 4": [
+            ("hamstring", "compound", "barbell"),
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "compound", "machine"),
+            ("hamstring", "compound", "cable"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ]
+                }
+            ],
+            "intermediate": [
+                # split 1
+                {
+                 "Day 1": [
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder_r", "isolation", "cable"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable"),
+            
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "barbell"),
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("quads", "isolation", "machine"),
+            ("abductor", "isolation", "machine"),
+            ("abductor", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")            
+                    ],
+                    "Day 3": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "barbell"),
+            ("back", "isolation", "cable"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("biceps", "isolation", "cable"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                    "Day 4": [
+            ("hamstring", "isolation", "dumbbell"),            
+            ("hamstring", "compound", "barbell"),
+            ("hamstring", "compound", "machine"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("glute", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),            
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("glute", "isolation", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight")
+                    ] 
+                },
+                # split 2
+                {
+                 "Day 1": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("back", "isolation", "cable"),
+            ("shoulder", "compound", "machine"),
+            ("shoulder_l", "isolation", "cable"),
+            ("chest", "compound", "dumbbell"),
+            ("chest", "compound", "barbell"),
+            ("triceps", "isolation", "dumbbell"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable")
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "barbell"),
+            ("quads", "isolation", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("abductor", "isolation", "machine"),
+            ("adductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")           
+                    ],
+                    "Day 3": [
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("biceps", "isolation", "barbell"),
+            ("biceps", "isolation", "dumbbell"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                      "Day 4": [
+            ("hamstring", "compound", "barbell"),
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "compound", "machine"),
+            ("hamstring", "compound", "cable"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ]
+                }
+            ],
+            "advanced": [
+                # split 1
+                {
+                 "Day 1": [
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder_r", "isolation", "cable"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable"),
+            
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "barbell"),
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("quads", "isolation", "machine"),
+            ("abductor", "isolation", "machine"),
+            ("abductor", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")            
+                    ],
+                    "Day 3": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "barbell"),
+            ("back", "isolation", "cable"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("biceps", "isolation", "cable"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                    "Day 4": [
+            ("hamstring", "isolation", "dumbbell"),            
+            ("hamstring", "compound", "barbell"),
+            ("hamstring", "compound", "machine"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("glute", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),            
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("glute", "isolation", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight")
+                    ] 
+                },
+                # split 2
+                {
+                 "Day 1": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("back", "isolation", "cable"),
+            ("shoulder", "compound", "machine"),
+            ("shoulder_l", "isolation", "cable"),
+            ("chest", "compound", "dumbbell"),
+            ("chest", "compound", "barbell"),
+            ("triceps", "isolation", "dumbbell"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable")
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "barbell"),
+            ("quads", "isolation", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("abductor", "isolation", "machine"),
+            ("adductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")           
+                    ],
+                    "Day 3": [
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("biceps", "isolation", "barbell"),
+            ("biceps", "isolation", "dumbbell"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                      "Day 4": [
+            ("hamstring", "compound", "barbell"),
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "compound", "machine"),
+            ("hamstring", "compound", "cable"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ]
+                }
+            ]
+        },
+        "fat_loss": {
+            "beginner": [
+                # split 1
+                {
+                 "Day 1": [
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder_r", "isolation", "cable"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable"),
+            
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "barbell"),
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("quads", "isolation", "machine"),
+            ("abductor", "isolation", "machine"),
+            ("abductor", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")            
+                    ],
+                    "Day 3": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "barbell"),
+            ("back", "isolation", "cable"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("biceps", "isolation", "cable"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                    "Day 4": [
+            ("hamstring", "isolation", "dumbbell"),            
+            ("hamstring", "compound", "barbell"),
+            ("hamstring", "compound", "machine"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("glute", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),            
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("glute", "isolation", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight")
+                    ] 
+                },
+                # split 2
+                {
+                 "Day 1": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("back", "isolation", "cable"),
+            ("shoulder", "compound", "machine"),
+            ("shoulder_l", "isolation", "cable"),
+            ("chest", "compound", "dumbbell"),
+            ("chest", "compound", "barbell"),
+            ("triceps", "isolation", "dumbbell"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable")
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "barbell"),
+            ("quads", "isolation", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("abductor", "isolation", "machine"),
+            ("adductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")           
+                    ],
+                    "Day 3": [
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("biceps", "isolation", "barbell"),
+            ("biceps", "isolation", "dumbbell"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                      "Day 4": [
+            ("hamstring", "compound", "barbell"),
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "compound", "machine"),
+            ("hamstring", "compound", "cable"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ]
+                }
+            ],
+            "intermediate": [
+                # split 1
+                {
+                 "Day 1": [
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder_r", "isolation", "cable"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable"),
+            
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "barbell"),
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("quads", "isolation", "machine"),
+            ("abductor", "isolation", "machine"),
+            ("abductor", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")            
+                    ],
+                    "Day 3": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "barbell"),
+            ("back", "isolation", "cable"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("biceps", "isolation", "cable"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                    "Day 4": [
+            ("hamstring", "isolation", "dumbbell"),            
+            ("hamstring", "compound", "barbell"),
+            ("hamstring", "compound", "machine"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("glute", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),            
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("glute", "isolation", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight")
+                    ] 
+                },
+                # split 2
+                {
+                 "Day 1": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("back", "isolation", "cable"),
+            ("shoulder", "compound", "machine"),
+            ("shoulder_l", "isolation", "cable"),
+            ("chest", "compound", "dumbbell"),
+            ("chest", "compound", "barbell"),
+            ("triceps", "isolation", "dumbbell"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable")
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "barbell"),
+            ("quads", "isolation", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("abductor", "isolation", "machine"),
+            ("adductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")           
+                    ],
+                    "Day 3": [
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("biceps", "isolation", "barbell"),
+            ("biceps", "isolation", "dumbbell"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                      "Day 4": [
+            ("hamstring", "compound", "barbell"),
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "compound", "machine"),
+            ("hamstring", "compound", "cable"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ]
+                }
+            ],
+            "advanced": [
+                # split 1
+                {
+                 "Day 1": [
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder_r", "isolation", "cable"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable"),
+            
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "barbell"),
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("quads", "isolation", "machine"),
+            ("abductor", "isolation", "machine"),
+            ("abductor", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")            
+                    ],
+                    "Day 3": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "barbell"),
+            ("back", "isolation", "cable"),
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("biceps", "isolation", "cable"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                    "Day 4": [
+            ("hamstring", "isolation", "dumbbell"),            
+            ("hamstring", "compound", "barbell"),
+            ("hamstring", "compound", "machine"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("glute", "isolation", "cable"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight"),
+            ("abs", "isolation", "cable")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),            
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("glute", "isolation", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "compound", "barbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine"),
+            ("abs", "isolation", "bodyweight")
+                    ] 
+                },
+                # split 2
+                {
+                 "Day 1": [
+            ("back", "compound", "machine"),
+            ("back", "compound", "cable"),
+            ("back", "isolation", "cable"),
+            ("shoulder", "compound", "machine"),
+            ("shoulder_l", "isolation", "cable"),
+            ("chest", "compound", "dumbbell"),
+            ("chest", "compound", "barbell"),
+            ("triceps", "isolation", "dumbbell"),
+            ("triceps", "isolation", "cable"),
+            ("abs", "isolation", "cable")
+                        
+                    ],
+                    "Day 2": [
+            ("quads", "compound", "machine"),
+            ("quads", "compound", "barbell"),
+            ("quads", "isolation", "machine"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("abductor", "isolation", "machine"),
+            ("adductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")           
+                    ],
+                    "Day 3": [
+            ("shoulder_l", "isolation", "dumbbell"),
+            ("shoulder_l", "isolation", "cable"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("shoulder", "isolation", "dumbbell"),
+            ("back", "compound", "barbell"),
+            ("back", "compound", "machine"),
+            ("lower_back", "isolation", "bodyweight"),
+            ("biceps", "isolation", "barbell"),
+            ("biceps", "isolation", "dumbbell"),
+            ("abs", "isolation", "bodyweight")
+                    ],
+                      "Day 4": [
+            ("hamstring", "compound", "barbell"),
+            ("glute", "compound", "machine"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "compound", "dumbbell"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ],
+                    "Day 5": [
+            ("glute", "compound", "barbell"),
+            ("quads", "compound", "dumbbell"),
+            ("glute", "compound", "machine"),
+            ("hamstring", "compound", "cable"),
+            ("hamstring", "isolation", "machine"),
+            ("glute", "isolation", "dumbbell"),
+            ("glute", "isolation", "cable"),
+            ("hamstring", "isolation", "dumbbell"),
+            ("abductor", "isolation", "machine"),
+            ("calf", "isolation", "machine")
+                    ]
+                }
+            ]
         }
     },
 
