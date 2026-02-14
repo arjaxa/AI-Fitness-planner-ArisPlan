@@ -2,7 +2,7 @@
 
 A smart workout generator that builds structured, goal-oriented training plans in seconds.
 
-Arisplan creates personalized gym routines based on user goals, experience level, and preferred training split — then exports the plan as a clean PDF.
+ArisPlan creates personalized gym routines based on user goals and experience level and then exports the plan as a PDF.
 
 ---
 
@@ -10,7 +10,7 @@ Arisplan creates personalized gym routines based on user goals, experience level
 
 * Generates complete multi-day workout splits based on experience level
 * Selects exercises from a structured library using muscle group, equipment, and movement patterns
-* Automatically builds supersets using a compatibility scoring system
+* Automatically builds supersets using a compatibility checking system
 * Prevents duplicate exercises within the same training day
 * Chooses sets and reps according to the user’s goal
 * Exports workout plans as downloadable PDFs
@@ -37,7 +37,7 @@ https://arisplan.streamlit.app/
 ## Running Locally
 
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/arjaxa/AI-Fitness-planner-ArisPlan >
 cd ai-fitness-planner
 pip install -r requirements.txt
 streamlit run app.py
