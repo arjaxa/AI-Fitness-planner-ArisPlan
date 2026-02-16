@@ -24,8 +24,8 @@ if "show_download" not in st.session_state:
 
 st.set_page_config(page_title="AI Fitness Planner", page_icon="aris.png")
 
-st.title("AI Fitness Planner")
-st.write("Plan personalized workouts based on your goals and preferences.")
+st.title("ArisPlan • AI Fitness Planner")
+st.write("Plan personalized workouts based on your goals and preferences")
 
 
 
