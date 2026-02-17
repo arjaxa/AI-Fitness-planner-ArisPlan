@@ -400,20 +400,21 @@ if st.session_state.generated_plan:
 
                 ex1, ex2 = group["exercises"]
 
+                reps1 = " → ".join(ex1["reps"]) if isinstance(ex1["reps"], list) else ex1["reps"]
+                reps2 = " → ".join(ex2["reps"]) if isinstance(ex2["reps"], list) else ex2["reps"]
+
+                sets_display = ex1["sets"]
+
                 st.markdown(
                     f"""
-                    **{workout_number}. {ex1['name']}**
+                    **{workout_number}. {ex1['name']} + {ex2['name']}**
                     <span style='float:right'>
-                    {ex1['sets']} x {ex1['reps']}
-                    </span>
-
-                    **+ {ex2['name']}**
-                    <span style='float:right'>
-                    {ex2['sets']} x {ex2['reps']}
+                    {sets_display} x {reps1} + {reps2}
                     </span>
                     """,
                     unsafe_allow_html=True
                 )
+
 
             workout_number += 1
 
