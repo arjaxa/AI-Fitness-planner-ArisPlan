@@ -201,6 +201,57 @@ def generate_plan(selected_split, goal, experience_key):
 
                 i += 2  
 
+            # FST7   
+            elif method == "fst7":
+                ex1["sets"] = 7
+                ex1["reps"] = "12"
+                ex1["note"] = "FST-7: 20-30 sec rest between sets"
+
+                grouped_plan.append({
+                    "mode": "fst7",
+                    "exercises": [ex1]
+                })
+
+                i += 1
+
+            # pyramid ascending
+            elif method == "pyramid_asc":
+                ex1["sets"] = 4
+                ex1["reps"] = ["12", "10", "8", "6"]
+                ex1["note"] = "Increase weight each set"
+                grouped_plan.append({
+                    "mode": "pyramid_asc",
+                    "exercises": [ex1]
+                })
+
+                i += 1
+
+            # pyramid descending
+            elif method == "pyramid_desc":
+                ex1["sets"] = 4
+                ex1["reps"] = ["6", "8", "10", "12"]
+                ex1["note"] = "Decrease weight each set"
+
+                grouped_plan.append({
+                    "mode": "pyramid_desc",
+                    "exercises": [ex1]
+                })
+
+                i += 1
+
+            # AMRAP
+            elif method == "amrap":
+                ex1["sets"] = get_random_sets(experience_key)
+                ex1["reps"] = "AMRAP"
+                ex1["note"] = "As many reps as possible"
+
+                grouped_plan.append({
+                    "mode": "amrap",
+                    "exercises": [ex1]
+                })
+
+                i += 1                
+
             # normal
             else:
 
@@ -306,6 +357,7 @@ if st.button("Generate plan"):
 
 
 # Display plan
+
 if st.session_state.generated_plan:
 
     for day, groups in st.session_state.generated_plan.items():
@@ -315,24 +367,36 @@ if st.session_state.generated_plan:
 
         for group in groups:
 
-            # single workouts
-            if group["mode"] == "single":
+            mode = group["mode"]
+
+            # methods
+            if mode in ["single", "fst7", "dropset", "amrap",
+                        "pyramid_asc", "pyramid_desc"]:
 
                 ex = group["exercises"][0]
+
+                # pyramid
+                if isinstance(ex["reps"], list):
+                    reps_display = " → ".join(ex["reps"])
+                else:
+                    reps_display = ex["reps"]
 
                 st.markdown(
                     f"""
                     **{workout_number}. {ex['name']}**
                     <span style='float:right'>
-                    {ex['sets']} x {ex['reps']}
+                    {ex['sets']} x {reps_display}
                     </span>
                     """,
                     unsafe_allow_html=True
                 )
 
+                # notes
+                if "note" in ex:
+                    st.caption(ex["note"])
 
-            # supersets
-            elif group["mode"] == "superset":
+            # superset
+            elif mode == "superset":
 
                 ex1, ex2 = group["exercises"]
 
@@ -354,6 +418,8 @@ if st.session_state.generated_plan:
             workout_number += 1
 
         st.divider()
+
+
 
 
     

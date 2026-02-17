@@ -5,7 +5,7 @@ custom_splits = {
                 # split 1 / PPL
                 {
                     "Day 1": [
-            ("chest", "compound", "barbell", "normal"),
+            ("chest", "compound", "barbell", "fst7"),
             ("chest", "isolation", "cable", "normal"),
             ("chest", "isolation", "machine", "normal"),
             ("shoulder", "compound", "barbell", "normal"),
