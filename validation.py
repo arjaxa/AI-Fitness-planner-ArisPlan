@@ -7,7 +7,7 @@ def validate_template(template: dict):
             raise ValueError(f"{day} has no exercises")
 
         for ex in exercises:
-            if not isinstance(ex, tuple) or len(ex) != 3:
+            if not isinstance(ex, tuple) or len(ex) not in (3, 4):
                 raise ValueError(
                     f"Invalid exercise format in {day}: {ex}"
                 )

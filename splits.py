@@ -5,68 +5,68 @@ custom_splits = {
                 # split 1 / PPL
                 {
                     "Day 1": [
-            ("chest", "compound", "barbell"),
-            ("chest", "isolation", "cable"),
-            ("chest", "isolation", "machine"),
-            ("shoulder", "compound", "barbell"),
-            ("shoulder", "isolation", "cable"),
-            ("shoulder", "isolation", "dumbbell"),
-            ("triceps", "compound", "barbell"),
-            ("triceps", "isolation", "cable"),
-            ("triceps", "compound", "bodyweight")
+            ("chest", "compound", "barbell", "normal"),
+            ("chest", "isolation", "cable", "normal"),
+            ("chest", "isolation", "machine", "normal"),
+            ("shoulder", "compound", "barbell", "normal"),
+            ("shoulder", "isolation", "cable", "normal"),
+            ("shoulder", "isolation", "dumbbell", "normal"),
+            ("triceps", "compound", "barbell", "superset"),
+            ("triceps", "isolation", "cable", "normal"),
+            ("triceps", "compound", "bodyweight", "normal")
                     ],
                     "Day 2": [
-            ("quads", "isolation", "machine"),
-            ("quads", "isolation", "machine"),
-            ("quads", "compound", "barbell"),
-            ("quads", "compound", "dumbbell"),
-            ("hamstring", "compound", "barbell"),
-            ("hamstring", "isolation", "machine"),
-            ("hamstring", "compound", "dumbbell"),
-            ("calf", "isolation", "machine")           
+            ("quads", "isolation", "machine", "normal"),
+            ("quads", "isolation", "machine", "normal"),
+            ("quads", "compound", "barbell", "normal"),
+            ("quads", "compound", "dumbbell", "normal"),
+            ("hamstring", "compound", "barbell", "normal"),
+            ("hamstring", "isolation", "machine", "normal"),
+            ("hamstring", "compound", "dumbbell", "normal"),
+            ("calf", "isolation", "machine", "normal")           
                     ],
                     "Day 3": [
-            ("back", "compound", "machine"),
-            ("back", "compound", "barbell"),
-            ("back", "compound", "machine"),
-            ("back", "compound", "cable"),
-            ("back", "compound", "bodyweight"),
-            ("biceps", "isolation", "barbell"),
-            ("biceps", "isolation", "dumbbell"),
-            ("lower_back", "isolation", "bodyweight")           
+            ("back", "compound", "machine", "normal"),
+            ("back", "compound", "barbell", "normal"),
+            ("back", "compound", "machine", "normal"),
+            ("back", "compound", "cable", "normal"),
+            ("back", "compound", "bodyweight", "normal"),
+            ("biceps", "isolation", "barbell", "normal"),
+            ("biceps", "isolation", "dumbbell", "normal"),
+            ("lower_back", "isolation", "bodyweight", "normal")           
                     ]
                 },
                 # split 2
                 {
                     "Day 1": [
-            ("chest", "compound", "barbell"),
-            ("chest", "isolation", "machine"),
-            ("chest", "isolation", "dumbbell"),
-            ("shoulder", "compound", "barbell"),
-            ("shoulder", "isolation", "cable"),
-            ("shoulder", "isolation", "dumbbell"),
-            ("triceps", "compound", "barbell"),
-            ("triceps", "isolation", "cable"),
-            ("triceps", "compound", "bodyweight")            
+            ("chest", "compound", "barbell", "normal"),
+            ("chest", "isolation", "machine", "normal"),
+            ("chest", "isolation", "dumbbell", "normal"),
+            ("shoulder", "compound", "barbell", "normal"),
+            ("shoulder", "isolation", "cable", "normal"),
+            ("shoulder", "isolation", "dumbbell", "normal"),
+            ("triceps", "compound", "barbell", "normal"),
+            ("triceps", "isolation", "cable", "normal"),
+            ("triceps", "compound", "bodyweight", "normal")            
                     ],
                     "Day 2": [
-            ("quads", "isolation", "machine"),
-            ("quads", "compound", "barbell"),
-            ("quads", "compound", "dumbbell"),
-            ("hamstring", "compound", "barbell"),
-            ("hamstring", "isolation", "machine"),
-            ("hamstring", "compound", "dumbbell"),
-            ("calf", "isolation", "machine")            
+            ("quads", "isolation", "machine", "normal"),
+            ("quads", "compound", "barbell", "normal"),
+            ("quads", "compound", "dumbbell", "normal"),
+            ("hamstring", "compound", "barbell", "normal"),
+            ("hamstring", "isolation", "machine", "normal"),
+            ("hamstring", "compound", "dumbbell", "normal"),
+            ("calf", "isolation", "machine", "normal")            
                     ],
                     "Day 3": [
-            ("back", "compound", "machine"),
-            ("back", "compound", "machine"),
-            ("back", "compound", "cable"),
-            ("back", "isolation", "cable"),
-            ("biceps", "isolation", "barbell"),
-            ("biceps", "isolation", "cable"),
-            ("back", "compound", "bodyweight"),
-            ("lower_back", "isolation", "bodyweight")
+            ("back", "compound", "machine", "normal"),
+            ("back", "compound", "machine", "normal"),
+            ("back", "compound", "cable", "normal"),
+            ("back", "isolation", "cable", "normal"),
+            ("biceps", "isolation", "barbell", "normal"),
+            ("biceps", "isolation", "cable", "normal"),
+            ("back", "compound", "bodyweight", "normal"),
+            ("lower_back", "isolation", "bodyweight", "normal")
 
                     ]
                 }

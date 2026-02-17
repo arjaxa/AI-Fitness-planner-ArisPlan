@@ -120,75 +120,88 @@ def generate_plan(selected_split, goal, experience_key):
 
     for day, exercises in selected_split.items():
 
-        # superset limit
-        limits = {
-            "beginner": 1,
-            "intermediate": 2,
-            "advanced": 3
-        }
-        superset_limit = limits.get(experience_key, 1)
-        superset_count = 0
-
         used_exercises_today = set()
-        day_plan = []
+        grouped_plan = []
 
-        for muscle, ex_type, equipment in exercises:
+        i = 0
 
-            exercise = get_exercise(
+        while i < len(exercises):
+
+            current = exercises[i]
+
+            
+            if len(current) == 3:
+                muscle, ex_type, equipment = current
+                method = "normal"
+            else:
+                muscle, ex_type, equipment, method = current
+
+            ex1_raw = get_exercise(
                 muscle,
                 ex_type,
                 equipment,
                 used_exercises_today
             )
 
-            used_exercises_today.add(exercise["name"])
+            used_exercises_today.add(ex1_raw["name"])
 
-            day_plan.append({
-                "name": exercise["name"],
-                "primary": exercise["primary"],
-                "secondary": exercise["secondary"],
-                "type": exercise["type"],
-                "equipment": exercise["equipment"]
-            })
+            ex1 = {
+                "name": ex1_raw["name"],
+                "primary": ex1_raw["primary"],
+                "secondary": ex1_raw["secondary"],
+                "type": ex1_raw["type"],
+                "equipment": ex1_raw["equipment"]
+            }
 
+            # superset
+            if method == "superset":
 
+                if i == len(exercises) - 1:
+                    raise ValueError(
+                        f"Superset slot cannot be last in {day}"
+                    )
 
-        remaining = deepcopy(day_plan)
-        grouped_plan = []
+                next_ex = exercises[i + 1]
 
-        while remaining:
+                if len(next_ex) == 3:
+                    muscle2, ex_type2, equipment2 = next_ex
+                else:
+                    muscle2, ex_type2, equipment2, _ = next_ex
 
-            ex1 = remaining.pop(0)  
+                ex2_raw = get_exercise(
+                    muscle2,
+                    ex_type2,
+                    equipment2,
+                    used_exercises_today
+                )
 
-            partner_index = None
+                used_exercises_today.add(ex2_raw["name"])
 
-            # pairing
-            for idx, ex2 in enumerate(remaining):
-
-                if should_superset(ex1, ex2) and superset_count < superset_limit:
-                    partner_index = idx
-                    break
-
-            # superset...
-            if partner_index is not None:
-
-                ex2 = remaining.pop(partner_index)
+                ex2 = {
+                    "name": ex2_raw["name"],
+                    "primary": ex2_raw["primary"],
+                    "secondary": ex2_raw["secondary"],
+                    "type": ex2_raw["type"],
+                    "equipment": ex2_raw["equipment"]
+                }
 
                 shared_sets = get_random_sets(experience_key)
                 shared_reps = get_random_reps(goal)
 
                 ex1["sets"] = shared_sets
-                ex2["sets"] = shared_sets
                 ex1["reps"] = shared_reps
+
+                ex2["sets"] = shared_sets
                 ex2["reps"] = shared_reps
 
                 grouped_plan.append({
                     "mode": "superset",
                     "exercises": [ex1, ex2]
                 })
-                superset_count += 1
 
-            
+                i += 2  
+
+            # normal
             else:
 
                 ex1["sets"] = get_random_sets(experience_key)
@@ -199,10 +212,12 @@ def generate_plan(selected_split, goal, experience_key):
                     "exercises": [ex1]
                 })
 
+                i += 1
 
         plan[day] = grouped_plan
 
     return plan
+
 
 
 
