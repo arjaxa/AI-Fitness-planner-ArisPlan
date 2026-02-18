@@ -276,7 +276,12 @@ def generate_plan(selected_split, goal, experience_key):
 
 # plan to pdf
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
-from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.platypus import Frame, PageTemplate
+from reportlab.lib.styles import ParagraphStyle
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.units import inch
+from reportlab.pdfgen import canvas
 from io import BytesIO
 
 
@@ -286,62 +291,121 @@ def plan_to_pdf(plan):
 
     doc = SimpleDocTemplate(
         buffer,
-    pagesize=A4,
-    rightMargin=40,
-    leftMargin=40,
-    topMargin=40,
-    bottomMargin=40
+        pagesize=A4,
+        rightMargin=40,
+        leftMargin=40,
+        topMargin=60,
+        bottomMargin=50
     )
 
-    styles = getSampleStyleSheet()
+    
+
+    title_style = ParagraphStyle(
+        name="TitleStyle",
+        fontName="Helvetica-Bold",
+        fontSize=22,
+        textColor=colors.white,
+        spaceAfter=20
+    )
+
+    day_style = ParagraphStyle(
+        name="DayStyle",
+        fontName="Helvetica-Bold",
+        fontSize=14,
+        textColor=colors.white,
+        spaceAfter=10
+    )
+
+    normal_style = ParagraphStyle(
+        name="NormalStyle",
+        fontName="Helvetica",
+        fontSize=11,
+        textColor=colors.white,
+        spaceAfter=6
+    )
+
+    note_style = ParagraphStyle(
+        name="NoteStyle",
+        fontName="Helvetica",
+        fontSize=9,
+        textColor=colors.grey,
+        leftIndent=15,
+        spaceAfter=6
+    )
 
     story = []
 
+    # app name
+    story.append(Paragraph("ArisPlan", title_style))
+    story.append(Spacer(1, 20))
+
+    # plan
     for day, groups in plan.items():
 
-        # Day title
-        story.append(Paragraph(f"<b>{day}</b>", styles["Heading2"]))
-        story.append(Spacer(1, 10))
+        story.append(Paragraph(day, day_style))
+        story.append(Spacer(1, 8))
 
         workout_number = 1
 
         for group in groups:
 
-            if group["mode"] == "single":
+            mode = group["mode"]
+
+            # normal
+            if mode in ["single", "fst7", "dropset", "amrap",
+                        "pyramid_asc", "pyramid_desc"]:
 
                 ex = group["exercises"][0]
 
-                text = f"""
-                <b>{workout_number}. {ex['name']}</b>
-                — {ex['sets']} x {ex['reps']}
-                """
+                reps = " → ".join(ex["reps"]) if isinstance(ex["reps"], list) else ex["reps"]
 
-                story.append(Paragraph(text, styles["BodyText"]))
+                text = f"<b>{workout_number}. {ex['name']}</b> — {ex['sets']} x {reps}"
+                story.append(Paragraph(text, normal_style))
 
+                if "note" in ex:
+                    story.append(Paragraph(ex["note"], note_style))
 
-            elif group["mode"] == "superset":
+            # superset
+            elif mode == "superset":
 
                 ex1, ex2 = group["exercises"]
 
-                text = f"""
-                <b>{workout_number}. {ex1['name']}</b>
-                — {ex1['sets']} x {ex1['reps']}<br/>
-                + {ex2['name']}
-                — {ex2['sets']} x {ex2['reps']}
-                """
+                reps1 = " → ".join(ex1["reps"]) if isinstance(ex1["reps"], list) else ex1["reps"]
+                reps2 = " → ".join(ex2["reps"]) if isinstance(ex2["reps"], list) else ex2["reps"]
 
-                story.append(Paragraph(text, styles["BodyText"]))
+                text = f"<b>{workout_number}. {ex1['name']} + {ex2['name']}</b> — {ex1['sets']} x {reps1} + {reps2}"
+                story.append(Paragraph(text, normal_style))
 
-            story.append(Spacer(1, 6))
             workout_number += 1
 
         story.append(Spacer(1, 18))
 
-    doc.build(story)
+    # bg/footer
+
+    def add_background_and_footer(canvas, doc):
+        width, height = A4
+
+        # background
+        canvas.saveState()
+        canvas.setFillColor(colors.black)
+        canvas.rect(0, 0, width, height, fill=1)
+
+        # footer
+        canvas.setFillColor(colors.white)
+        canvas.setFont("Helvetica", 9)
+        canvas.drawCentredString(width / 2, 20, "by arjaxa @ArigDev")
+
+        canvas.restoreState()
+
+    doc.build(
+        story,
+        onFirstPage=add_background_and_footer,
+        onLaterPages=add_background_and_footer
+    )
 
     buffer.seek(0)
-
     return buffer
+
 
  
 
