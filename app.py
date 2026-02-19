@@ -13,14 +13,13 @@ from validation import validate_template
 from ml_engine import ml_should_superset as should_superset
 
 
-if "generated_plan" not in st.session_state:
-    st.session_state.generated_plan = None
+if "plan" not in st.session_state:
+    st.session_state.plan = None
+
 if "last_selection" not in st.session_state:
     st.session_state.last_selection = None
-if "pdf_file" not in st.session_state:
-    st.session_state.pdf_file = None 
-if "show_download" not in st.session_state:
-    st.session_state.show_download = False       
+
+      
 
 st.set_page_config(page_title="AI Fitness Planner", page_icon="aris.png")
 
@@ -485,14 +484,6 @@ if st.session_state.generated_plan:
         st.divider()
 
 
-
-
-    
-        
-        
-
-
-            
 
 
 
