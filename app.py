@@ -502,4 +502,6 @@ if st.session_state.generated_plan:
         
                
     
-    
+            
+
+st.markdown("by arjaxa @ArigDev")  
