@@ -653,6 +653,15 @@ EXERCISE_LIBRARY = [
         "pattern": "hinge"
     },
     {
+        "name": "BB glute bridge",
+        "primary": "glute",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "hinge"
+    },
+    {
         "name": "Smith hip thrust",
         "primary": "glute",
         "secondary": ["hamstring"],
@@ -993,6 +1002,15 @@ EXERCISE_LIBRARY = [
         "pattern": "raise"
     },
     {
+        "name": "DB hammer front raise",
+        "primary": "shoulder_f",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "raise"
+    },
+    {
         "name": "BB upright row",
         "primary": "shoulder_f",
         "secondary": [],
@@ -1122,6 +1140,15 @@ EXERCISE_LIBRARY = [
         "pattern": "curl"
     },
     {
+        "name": "BB preacher bicep curls",
+        "primary": "biceps",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "barbell",
+        "fatigue": 3,
+        "pattern": "curl"
+    },
+    {
         "name": "DB bicep curls",
         "primary": "biceps",
         "secondary": [],
@@ -1158,8 +1185,70 @@ EXERCISE_LIBRARY = [
         "pattern": "curl"
     },
     {
-        "name": "DB hammer curls",
+        "name": "Cable rope hammer curls",
+        "primary": "biceps_b",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "curl"
+    },
+    {
+        "name": "Cable bicep curl (single arm)",
         "primary": "biceps",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "curl"
+    },{
+        "name": "Cable hammer curl (single arm)",
+        "primary": "biceps_b",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "cable",
+        "fatigue": 2,
+        "pattern": "curl"
+    },
+    {
+        "name": "DB hammer curls",
+        "primary": "biceps_b",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "curl"
+    },
+    {
+        "name": "DB preacher hammer curls",
+        "primary": "biceps_b",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "curl"
+    },
+    {
+        "name": "DB alternating hammer curls",
+        "primary": "biceps_b",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "curl"
+    },
+    {
+        "name": "DB concentration hammer curls",
+        "primary": "biceps_b",
+        "secondary": [],
+        "type": "isolation",
+        "equipment": "dumbbell",
+        "fatigue": 2,
+        "pattern": "curl"
+    },
+    {
+        "name": "DB preacher hammer curls",
+        "primary": "biceps_b",
         "secondary": [],
         "type": "isolation",
         "equipment": "dumbbell",
