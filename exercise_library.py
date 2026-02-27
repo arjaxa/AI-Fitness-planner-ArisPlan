@@ -289,7 +289,7 @@ EXERCISE_LIBRARY = [
         "secondary": [],
         "type": "isolation",
         "equipment": "machine",
-        "fatigue": 1,
+        "fatigue": 2,
         "pattern": "curl"
     },
     {
@@ -307,7 +307,7 @@ EXERCISE_LIBRARY = [
         "secondary": [],
         "type": "isolation",
         "equipment": "machine",
-        "fatigue": 1,
+        "fatigue": 2,
         "pattern": "curl"
     },
     {

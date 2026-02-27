@@ -12,6 +12,9 @@ from validation import validate_template
 
 from ml_engine import ml_should_superset as should_superset
 
+from superset_model import predict_superset_muscle
+
+
 
 if "plan" not in st.session_state:
     st.session_state.plan = None
@@ -154,23 +157,25 @@ def generate_plan(selected_split, goal, experience_key):
 
             # superset
             if method == "superset":
-
-                if i == len(exercises) - 1:
-                    raise ValueError(
-                        f"Superset slot cannot be last in {day}"
-                    )
-
-                next_ex = exercises[i + 1]
-
-                if len(next_ex) == 3:
-                    muscle2, ex_type2, equipment2 = next_ex
+                compatible_muscle = predict_superset_muscle(
+                    muscle,
+                    ex_type,
+                    equipment
+                )
+                if ex_type == "compound":
+                    superset_type = "isolation"
                 else:
-                    muscle2, ex_type2, equipment2, _ = next_ex
+                    superset_type = "compound"
+
+                if equipment == "barbell":
+                    superset_equipment = random.choice(["machine", "cable", "dumbbell"])
+                else:
+                    superset_equipment = equipment   
 
                 ex2_raw = get_exercise(
-                    muscle2,
-                    ex_type2,
-                    equipment2,
+                    compatible_muscle,
+                    superset_type,
+                    superset_equipment,
                     used_exercises_today
                 )
 
@@ -197,8 +202,7 @@ def generate_plan(selected_split, goal, experience_key):
                     "mode": "superset",
                     "exercises": [ex1, ex2]
                 })
-
-                i += 2  
+                i += 1
 
             # FST7   
             elif method == "fst7":
